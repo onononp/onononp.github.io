@@ -1,0 +1,6 @@
+<h2 id="进程同步与互斥"><a href="#进程同步与互斥" class="headerlink" title="进程同步与互斥"></a>进程同步与互斥</h2><ol>
+<li><p>三个进程P1，P2，P3互斥使用一个包含N（N&gt;0）个单元的缓冲区，P1每次用produce()生成一个正整数并用put()送入缓冲区的某一空单元；P2每次用getodd()从该缓冲区中取出一个奇数并用countodd（）统计奇数个数；P3每次用geteven()从该缓冲区中取出一个偶数并用counteven()统计偶数个数。请用信号量机制实现这三个进程的同步与互斥活动。并说明所定义的信号量的含义（要求用伪代码描述）。</p>
+<p>答：互斥资源：缓冲区只能互斥访问，因此设置互斥信号量mutex</p>
+<p>同步问题：P1，P2因为奇数的放置与取用而同步，设同步信号量odd;P1，P3因为偶数的放置与取用而同步，设置同步信号量even；P1，P2，P3因为共享缓冲区，设同步信号量为empty,初值为N，程序如下：<a href="https://paste.ubuntu.com/p/5tJD3PSyC2/">https://paste.ubuntu.com/p/5tJD3PSyC2/</a></p>
+</li>
+</ol>

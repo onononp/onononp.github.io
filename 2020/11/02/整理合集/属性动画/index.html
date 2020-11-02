@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Java,Android,生活,记录">
+    <meta name="keywords" content="Java,Android,生活,记录">
     <meta name="description" content="我的个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -27,7 +27,7 @@
 </script>
 
 
-    <title>Hello World | 鱼想衣裳花想容</title>
+    <title>鱼想衣裳花想容</title>
     <link rel="icon" type="image/png" href="/tom.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -322,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-31
+                    2020-11-02
                 </div>
                 
 
@@ -465,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    670
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -487,15 +487,98 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h2><ul>
+<li>使用最多的是<code>AnimatorSet</code>和<code>ObjectAnimator</code>配合</li>
+<li>使用<code>ObjectAnimator</code>进行更精细化的控制，控制一个对象和一个属性值。使用多个<code>ObjectAnimator</code>组合到<code>AnimatorSet</code>形成一个动画</li>
+<li>属性动画通过调用属性get,set方法来真实地控制一个View的属性值</li>
+</ul>
+<ol>
+<li><p><code>ObjectAnimator</code></p>
+<ol>
+<li><p>创建一个<code>ObjectAnimator</code>对象只需通过其静态工厂类直接返还一个<code>ObjectAnimator</code>对象。</p>
+</li>
+<li><p>参数包括一个对象和一个对象的属性名字，这个属性必须有set和get方法，其内部会通过Java反射机制来调用set方法修改对象的属性值</p>
+</li>
+<li><blockquote>
+<p>ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(view,”translationX”,200);</p>
+<p>mObjectAnimator.setDuration(300);</p>
+<p>mObjectAnimator.start();</p>
+</blockquote>
+</li>
+<li><p>常用的可以直接使用的属性动画的属性值：</p>
+<ol>
+<li>translationX、translationY:用来沿着X轴或者Y轴进行平移</li>
+<li>rotation,totationX,totationY:用来围绕View的支点进行旋转</li>
+<li>PrivotX和PrivotY:控制View对象的支点位置，围绕这个支点进行旋转和缩放变换处理。默认该支点是View对象的中心点</li>
+<li>alpha:透明度，默认是1（不透明），0代表完全透明</li>
+<li>x和y:描述View对象在其容器中的最终位置</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><code>ValueAnimator</code></p>
+<ol>
+<li><p><code>ValueAnimator</code>不提供任何动画效果，它更像一个数值发生器，用来产生有一定规律的数字，从而让调用者控制动画的实现过程。通常情况下，在ValueAnimator的AnimatorUpdateListener中监听数值的变化，从而完成动画的变换，代码如下所示：</p>
+<blockquote>
+<p>ValueAnimator mValueAnimator=ValueAniamtor.ofFloat(0,100);</p>
+<p>mValueAniamtor.setTarget(view);</p>
+<p>mValueAnimator.setDuration(1000).start();</p>
+<p>mValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationUpdate(ValueAnimator animation){</p>
+<p>​    Float mFloat = (Float)animation.getAnimatedValue();</p>
+<p>}</p>
+<p>})</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>动画的监听</p>
+<ol>
+<li><p>完成的动画具有start,Repeat,End,Cancel四个过程，代码如下所示：</p>
+<blockquote>
+<p>ObjectAnimator animator = ObjectAniamtor.ofFloat(view,”alpha”,1.5f);</p>
+<p>animator.addListener(new Animator.AnimatorListener(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationStart(Animator animation){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationEnd(Animator animaton){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationCancel(Animator animation){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationRepeat(Animator animation){</p>
+<p>}</p>
+<p>})</p>
+</blockquote>
+<p>大部分时候我们只关心onAnimationEnd事件，Android也提供了AnimationListenerAdapter来让我们选择必要的事件进行监听。</p>
+<blockquote>
+<p>ObjectAnimator animator=ObjectAnimator.ofFloat(view,”alpha”,1.5f);</p>
+<p>animator.addListener(new AnimatorListenerAdapter(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationEnd(Animator animation){</p>
+<p>​    super.onAnimationEnd(animation);}</p>
+<p>})</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>组合动画AnimatorSet</p>
+<ol>
+<li>Animator提供了一个play()方法，如果我们向这个方法中传入一个Animator对象（<code>ObjectAnmator</code>或<code>ValueAnimator</code>），将会返回一个AnimatorSet.Builder的实例。</li>
+<li>AnimatorSet.Builder采用了建造者模式，每次调用方法返回自身用于继续构建。AnimatorSet.Builder中包含以下四个方法：<ol>
+<li>after(Animator anim):将现有动画插入到传入的动画之后执行</li>
+<li>after(long delay):将现有动画延迟毫秒后执行</li>
+<li>with(Animator anim):将现有动画和传入动画同时执行</li>
+<li>before(Animator anim):将现有动画插入到传入动画之前执行</li>
+</ol>
+</li>
+</ol>
+</li>
+<li></li>
+</ol>
 
             </div>
             <hr/>
@@ -521,7 +604,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://onononp.github.io.git/2020/10/31/hello-world/">https://onononp.github.io.git/2020/10/31/hello-world/</a>
+                    <a href="https://onononp.github.io.git/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/">https://onononp.github.io.git/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -727,7 +810,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-10-31T21-41-26',
+        id: '2020-11-02T23-13-25',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -751,7 +834,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Sat Oct 31 2020 21:41:26 GMT+0800',
+    id: 'Mon Nov 02 2020 23:13:25 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -776,9 +859,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://onononp.github.io.git/2020/10/31/hello-world/';
-        this.page.identifier = '/2020/10/31/hello-world/';
-        this.page.title = 'Hello World';
+        this.page.url = 'https://onononp.github.io.git/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/';
+        this.page.identifier = '/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/';
+        this.page.title = '';
     };
     let disqus_shortname = '';
 
@@ -826,65 +909,32 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/01/%E6%B5%8B%E8%AF%95%E4%B8%BB%E9%A2%98/">
+                <a href="/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="测试主题">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">测试主题</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-01
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            鱼想衣裳花想容
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/31/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            属性动画
+使用最多的是AnimatorSet和ObjectAnimator配合
+使用ObjectAnimator进行更精细化的控制，控制一个对象和一个属性值。使用多个ObjectAnimator组合到AnimatorSet形成一个动画
+属性
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-02
                             </span>
                         <span class="publish-author">
                             
@@ -895,6 +945,44 @@ gitment.render('gitment-content');
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%20%E5%90%8C%E6%AD%A5%E4%BA%92%E6%96%A5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            进程同步与互斥
+三个进程P1，P2，P3互斥使用一个包含N（N&gt;0）个单元的缓冲区，P1每次用produce()生成一个正整数并用put()送入缓冲区的某一空单元；P2每次用getodd()从该缓冲区中取出一个奇数并用countodd
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            鱼想衣裳花想容
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>

@@ -1,0 +1,92 @@
+<h2 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h2><ul>
+<li>使用最多的是<code>AnimatorSet</code>和<code>ObjectAnimator</code>配合</li>
+<li>使用<code>ObjectAnimator</code>进行更精细化的控制，控制一个对象和一个属性值。使用多个<code>ObjectAnimator</code>组合到<code>AnimatorSet</code>形成一个动画</li>
+<li>属性动画通过调用属性get,set方法来真实地控制一个View的属性值</li>
+</ul>
+<ol>
+<li><p><code>ObjectAnimator</code></p>
+<ol>
+<li><p>创建一个<code>ObjectAnimator</code>对象只需通过其静态工厂类直接返还一个<code>ObjectAnimator</code>对象。</p>
+</li>
+<li><p>参数包括一个对象和一个对象的属性名字，这个属性必须有set和get方法，其内部会通过Java反射机制来调用set方法修改对象的属性值</p>
+</li>
+<li><blockquote>
+<p>ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(view,”translationX”,200);</p>
+<p>mObjectAnimator.setDuration(300);</p>
+<p>mObjectAnimator.start();</p>
+</blockquote>
+</li>
+<li><p>常用的可以直接使用的属性动画的属性值：</p>
+<ol>
+<li>translationX、translationY:用来沿着X轴或者Y轴进行平移</li>
+<li>rotation,totationX,totationY:用来围绕View的支点进行旋转</li>
+<li>PrivotX和PrivotY:控制View对象的支点位置，围绕这个支点进行旋转和缩放变换处理。默认该支点是View对象的中心点</li>
+<li>alpha:透明度，默认是1（不透明），0代表完全透明</li>
+<li>x和y:描述View对象在其容器中的最终位置</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><code>ValueAnimator</code></p>
+<ol>
+<li><p><code>ValueAnimator</code>不提供任何动画效果，它更像一个数值发生器，用来产生有一定规律的数字，从而让调用者控制动画的实现过程。通常情况下，在ValueAnimator的AnimatorUpdateListener中监听数值的变化，从而完成动画的变换，代码如下所示：</p>
+<blockquote>
+<p>ValueAnimator mValueAnimator=ValueAniamtor.ofFloat(0,100);</p>
+<p>mValueAniamtor.setTarget(view);</p>
+<p>mValueAnimator.setDuration(1000).start();</p>
+<p>mValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationUpdate(ValueAnimator animation){</p>
+<p>​    Float mFloat = (Float)animation.getAnimatedValue();</p>
+<p>}</p>
+<p>})</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>动画的监听</p>
+<ol>
+<li><p>完成的动画具有start,Repeat,End,Cancel四个过程，代码如下所示：</p>
+<blockquote>
+<p>ObjectAnimator animator = ObjectAniamtor.ofFloat(view,”alpha”,1.5f);</p>
+<p>animator.addListener(new Animator.AnimatorListener(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationStart(Animator animation){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationEnd(Animator animaton){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationCancel(Animator animation){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationRepeat(Animator animation){</p>
+<p>}</p>
+<p>})</p>
+</blockquote>
+<p>大部分时候我们只关心onAnimationEnd事件，Android也提供了AnimationListenerAdapter来让我们选择必要的事件进行监听。</p>
+<blockquote>
+<p>ObjectAnimator animator=ObjectAnimator.ofFloat(view,”alpha”,1.5f);</p>
+<p>animator.addListener(new AnimatorListenerAdapter(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationEnd(Animator animation){</p>
+<p>​    super.onAnimationEnd(animation);}</p>
+<p>})</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>组合动画AnimatorSet</p>
+<ol>
+<li>Animator提供了一个play()方法，如果我们向这个方法中传入一个Animator对象（<code>ObjectAnmator</code>或<code>ValueAnimator</code>），将会返回一个AnimatorSet.Builder的实例。</li>
+<li>AnimatorSet.Builder采用了建造者模式，每次调用方法返回自身用于继续构建。AnimatorSet.Builder中包含以下四个方法：<ol>
+<li>after(Animator anim):将现有动画插入到传入的动画之后执行</li>
+<li>after(long delay):将现有动画延迟毫秒后执行</li>
+<li>with(Animator anim):将现有动画和传入动画同时执行</li>
+<li>before(Animator anim):将现有动画插入到传入动画之前执行</li>
+</ol>
+</li>
+</ol>
+</li>
+<li></li>
+</ol>
