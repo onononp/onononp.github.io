@@ -1,525 +1,1713 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
-    
-    
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
-        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
-    
-    
-    
-        <link rel="shortcut icon" href="/icons/favicon.ico">
-    
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
 
-    
-    
-        
-<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
 
-    
-    
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next-1.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next-1.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next-1.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="9pQKU_QUJqAwym5aGI-Q6w3OuzKW7WnqJPYiIRz-ZZ4">
+
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/iconfont.css">
-
-
-    
-    
 
 
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"onononp.github.io.git","root":"/","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
+  </script>
+
+  <meta name="description" content="我的个人博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="鱼想衣裳花想容">
+<meta property="og:url" content="https://onononp.github.io.git/index.html">
+<meta property="og:site_name" content="鱼想衣裳花想容">
+<meta property="og:description" content="我的个人博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="鱼想衣裳花想容">
+<meta property="article:tag" content="Java,Android,生活,记录">
+<meta name="twitter:card" content="summary">
 
 
-    <script>
-  var _hmt = _hmt || [];
-  (function() {var hm = document.createElement('script');
-  hm.src = 'https://hm.baidu.com/hm.js?0dcf8af559d404b4edae5cab49dd7ad1';
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(hm, s);
-  })();
+<link rel="canonical" href="https://onononp.github.io.git/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
 </script>
 
+  <title>鱼想衣裳花想容</title>
+  
 
 
 
 
 
 
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
 
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
   }
-</script>
-          
 
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
 
-    
-    
-    <title>
-          
-            鱼想衣裳花想容
-        
-    </title>
-    
-    
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="鱼想衣裳花想容" type="application/atom+xml">
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
 
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="鱼想衣裳花想容" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-Fuchsia mdui-theme-accent-white">
-  
-  <header class="mdui-appbar mdui-appbar-fixed">
-  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
-    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
-    <a href="/" class="mdui-typo-headline">鱼想衣裳花想容</a>
-    <a href="/" class="header-subtitle mdui-typo-headline">春风拂槛露华浓</a>
-    <div class="mdui-toolbar-spacer"></div>
-    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
-  </div>
-</header>
 
-<div class="mdui-dialog" id="search">
-  
-    <div class="search-form">
-      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
-    <div class="search-result" data-resource="/search.xml"></div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">鱼想衣裳花想容</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">春风拂槛露华浓</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">鱼想衣裳花想容</p>
+  <div class="site-description" itemprop="description">我的个人博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+      
+
+      
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://onononp.github.io.git/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+      <meta itemprop="description" content="我的个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/" class="post-title-link" itemprop="url">测试分类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-11-03 14:09:30 / 修改时间：14:12:15" itemprop="dateCreated datePublished" datetime="2020-11-03T14:09:30+08:00">2020-11-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
+        </span>
+    </span>
+
   
 </div>
 
-  <aside id="sidebar" class="mdui-drawer">
-    <div class="mdui-tab" mdui-tab>
-        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
-        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
     </div>
 
     
-    <div id="sidebar-tab1" class="mdui-p-a-2">
-        <div class="mdui-list">
-            
-                
-                <a href="/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-home"></i>
-                    </div>
-                    <div class="mdui-list-item-content">主页</div>
-                </a>
-            
-                
-                <a href="/tags/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-bookmark"></i>
-                    </div>
-                    <div class="mdui-list-item-content">标签</div>
-                </a>
-            
-                
-                <a href="/categories/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-folder"></i>
-                    </div>
-                    <div class="mdui-list-item-content">分类</div>
-                </a>
-            
-                
-                <a href="/archives/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-archive"></i>
-                    </div>
-                    <div class="mdui-list-item-content">归档</div>
-                </a>
-            
-                
-                <a href="/about/" class="mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-user"></i>
-                    </div>
-                    <div class="mdui-list-item-content">关于</div>
-                </a>
-            
-            <div class="mdui-list-item mdui-ripple">
-                <div class="mdui-list-item-icon">
-                    <i class="iconfont icon-moon"></i>
-                </div>
-                <div class="mdui-list-item-content">夜间模式</div>
-                <label class="mdui-switch" id="darkmode">
-                  <input type="checkbox" id="nightmode_switch"/>
-                  <i class="mdui-switch-icon"></i>
-                </label>
-            </div>           
-        </div>
-    </div>
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
-    <div id="sidebar-tab2" class="mdui-p-a-2">
-        <div class="sidebar-overview">
-            <div class="sidebar-avatar">
-                
-                    <img src="/icons/avatar.gif"/>
-                
-            </div>
-            <div class="sidebar-author-name">鱼想衣裳花想容</div>
-            <div class="sidebar-description">我的个人博客</div>
-        </div>
-        <div class="sidebar-links">
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
-                    <a href="mailto:3532612620@qq.com" class="mdui-chip-title">E-Mail</a>
-                </div>
-            
-                
-                <div class="mdui-chip">
-                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
-                    <a target="_blank" rel="noopener" href="https://github.com/onononp" class="mdui-chip-title">GitHub</a>
-                </div>
-            
-        </div>
-        <ul class="mdui-list" mdui-collapse="{accordion: true}">
-            <li class="mdui-collapse-item">
-                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-                    <div class="mdui-list-item-icon">
-                        <i class="iconfont icon-link"></i>
-                    </div>
-                    <div class="mdui-list-item-content">友情链接</div>
-                    <div class="mdui-collapse-item-arrow">
-                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
-                    </div>
-                </div>
-                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
-                    
-                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
-                            Meadow说明文档
-                        </a>
-                    
-                        <a target="_blank" rel="noopener" href="https://github.com/onononp/rime_custom" class="mdui-list-item mdui-ripple">
-                            Rime中文全拼输入法
-                        </a>
-                    
-                </ul>
-            </li>
-        </ul>
-    </div>
 
-    <div class="mdui-divider"></div>
-    
-    
-</aside>
+
+<div class="post-block">
   
-  <main id="main-contain" class="mdui-container mdui-m-t-5">
-    
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/">测试分类</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-11-03
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://onononp.github.io.git/2020/11/02/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+      <meta itemprop="description" content="我的个人博客">
     </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-11-03
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼想衣裳花想容">
     </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a>
-    </span>
-    
-  </div>
-</div>   
-    
-
-
-
-      
-      
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E6%B5%8B%E8%AF%95/ >测试</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
           
-            
-          
+            <a href="/2020/11/02/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-02 23:13:25" itemprop="dateCreated datePublished" datetime="2020-11-02T23:13:25+08:00">2020-11-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-08-29 08:34:53" itemprop="dateModified" datetime="2020-08-29T08:34:53+08:00">2020-08-29</time>
+      </span>
+
+  
+</div>
+
         </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+      </header>
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/11/02/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/"></a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-11-02
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-08-29
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
-    </span>
     
-  </div>
-</div>   
     
-
-
-
-      
-      
-  <div class="tag-line-space"></div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h2 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h2><ul>
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h2><ul>
 <li>使用最多的是<code>AnimatorSet</code>和<code>ObjectAnimator</code>配合</li>
 <li>使用<code>ObjectAnimator</code>进行更精细化的控制，控制一个对象和一个属性值。使用多个<code>ObjectAnimator</code>组合到<code>AnimatorSet</code>形成一个动画</li>
-<li>属性动画通过调用属性get,set...
+<li>属性动画通过调用属性get,set方法来真实地控制一个View的属性值</li>
+</ul>
+<ol>
+<li><p><code>ObjectAnimator</code></p>
+<ol>
+<li><p>创建一个<code>ObjectAnimator</code>对象只需通过其静态工厂类直接返还一个<code>ObjectAnimator</code>对象。</p>
+</li>
+<li><p>参数包括一个对象和一个对象的属性名字，这个属性必须有set和get方法，其内部会通过Java反射机制来调用set方法修改对象的属性值</p>
+</li>
+<li><blockquote>
+<p>ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(view,”translationX”,200);</p>
+<p>mObjectAnimator.setDuration(300);</p>
+<p>mObjectAnimator.start();</p>
+</blockquote>
+</li>
+<li><p>常用的可以直接使用的属性动画的属性值：</p>
+<ol>
+<li>translationX、translationY:用来沿着X轴或者Y轴进行平移</li>
+<li>rotation,totationX,totationY:用来围绕View的支点进行旋转</li>
+<li>PrivotX和PrivotY:控制View对象的支点位置，围绕这个支点进行旋转和缩放变换处理。默认该支点是View对象的中心点</li>
+<li>alpha:透明度，默认是1（不透明），0代表完全透明</li>
+<li>x和y:描述View对象在其容器中的最终位置</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><code>ValueAnimator</code></p>
+<ol>
+<li><p><code>ValueAnimator</code>不提供任何动画效果，它更像一个数值发生器，用来产生有一定规律的数字，从而让调用者控制动画的实现过程。通常情况下，在ValueAnimator的AnimatorUpdateListener中监听数值的变化，从而完成动画的变换，代码如下所示：</p>
+<blockquote>
+<p>ValueAnimator mValueAnimator=ValueAniamtor.ofFloat(0,100);</p>
+<p>mValueAniamtor.setTarget(view);</p>
+<p>mValueAnimator.setDuration(1000).start();</p>
+<p>mValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationUpdate(ValueAnimator animation){</p>
+<p>​    Float mFloat = (Float)animation.getAnimatedValue();</p>
+<p>}</p>
+<p>})</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>动画的监听</p>
+<ol>
+<li><p>完成的动画具有start,Repeat,End,Cancel四个过程，代码如下所示：</p>
+<blockquote>
+<p>ObjectAnimator animator = ObjectAniamtor.ofFloat(view,”alpha”,1.5f);</p>
+<p>animator.addListener(new Animator.AnimatorListener(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationStart(Animator animation){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationEnd(Animator animaton){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationCancel(Animator animation){</p>
+<p>}</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationRepeat(Animator animation){</p>
+<p>}</p>
+<p>})</p>
+</blockquote>
+<p>大部分时候我们只关心onAnimationEnd事件，Android也提供了AnimationListenerAdapter来让我们选择必要的事件进行监听。</p>
+<blockquote>
+<p>ObjectAnimator animator=ObjectAnimator.ofFloat(view,”alpha”,1.5f);</p>
+<p>animator.addListener(new AnimatorListenerAdapter(){</p>
+<p>​    @Override</p>
+<p>​    public void onAnimationEnd(Animator animation){</p>
+<p>​    super.onAnimationEnd(animation);}</p>
+<p>})</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>组合动画AnimatorSet</p>
+<ol>
+<li>Animator提供了一个play()方法，如果我们向这个方法中传入一个Animator对象（<code>ObjectAnmator</code>或<code>ValueAnimator</code>），将会返回一个AnimatorSet.Builder的实例。</li>
+<li>AnimatorSet.Builder采用了建造者模式，每次调用方法返回自身用于继续构建。AnimatorSet.Builder中包含以下四个方法：<ol>
+<li>after(Animator anim):将现有动画插入到传入的动画之后执行</li>
+<li>after(long delay):将现有动画延迟毫秒后执行</li>
+<li>with(Animator anim):将现有动画和传入动画同时执行</li>
+<li>before(Animator anim):将现有动画插入到传入动画之前执行</li>
+</ol>
+</li>
+</ol>
+</li>
+<li></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://onononp.github.io.git/2020/11/02/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%20%E5%90%8C%E6%AD%A5%E4%BA%92%E6%96%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+      <meta itemprop="description" content="我的个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
           
+            <a href="/2020/11/02/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%20%E5%90%8C%E6%AD%A5%E4%BA%92%E6%96%A5/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-02 23:13:25" itemprop="dateCreated datePublished" datetime="2020-11-02T23:13:25+08:00">2020-11-02</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-08-29 08:34:56" itemprop="dateModified" datetime="2020-08-29T08:34:56+08:00">2020-08-29</time>
+      </span>
+
+  
+</div>
+
         </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/11/02/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+      </header>
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/11/02/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%20%E5%90%8C%E6%AD%A5%E4%BA%92%E6%96%A5/"></a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-11-02
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-08-29
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
-    </span>
     
-  </div>
-</div>   
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="进程同步与互斥"><a href="#进程同步与互斥" class="headerlink" title="进程同步与互斥"></a>进程同步与互斥</h2><ol>
+<li><p>三个进程P1，P2，P3互斥使用一个包含N（N&gt;0）个单元的缓冲区，P1每次用produce()生成一个正整数并用put()送入缓冲区的某一空单元；P2每次用getodd()从该缓冲区中取出一个奇数并用countodd（）统计奇数个数；P3每次用geteven()从该缓冲区中取出一个偶数并用counteven()统计偶数个数。请用信号量机制实现这三个进程的同步与互斥活动。并说明所定义的信号量的含义（要求用伪代码描述）。</p>
+<p>答：互斥资源：缓冲区只能互斥访问，因此设置互斥信号量mutex</p>
+<p>同步问题：P1，P2因为奇数的放置与取用而同步，设同步信号量odd;P1，P3因为偶数的放置与取用而同步，设置同步信号量even；P1，P2，P3因为共享缓冲区，设同步信号量为empty,初值为N，程序如下：<a target="_blank" rel="noopener" href="https://paste.ubuntu.com/p/5tJD3PSyC2/">https://paste.ubuntu.com/p/5tJD3PSyC2/</a></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
     
 
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
-      
-      
-  <div class="tag-line-space"></div>
 
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://onononp.github.io.git/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+      <meta itemprop="description" content="我的个人博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
           
-            <h2 id="进程同步与互斥"><a href="#进程同步与互斥" class="headerlink" title="进程同步与互斥"></a>进程同步与互斥</h2><ol>
-<li><p>三个进程P1，P2，P3互斥使用一个包含N（N&gt;0）个单元的缓冲区，P1每次用produce()生成一个正整数并用put()送入缓冲区的某一空单元；P2每次用getodd()从该缓冲区中取出一个奇数并用countodd（）统计奇数个数；P3每次用geteven()从该缓冲区中取出一个偶数并用counteven()统计偶数个数。请用信号量机制实现这三个进程的同步与互斥活动。并说明所定义的信...
-          
+            <a href="/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/" class="post-title-link" itemprop="url">整理合集</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-11-02 23:00:58 / 修改时间：23:23:49" itemprop="dateCreated datePublished" datetime="2020-11-02T23:00:58+08:00">2020-11-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">面试</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
         </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/11/02/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%20%E5%90%8C%E6%AD%A5%E4%BA%92%E6%96%A5/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+      </header>
 
-    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
-      
-      
-        <div class="post-header"> 
-  <a class="post-header-title" href="/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/">整理合集</a>
-  <div class="post-header-meta">
-    <span>
-      <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-11-02
-    </span>
-    <span>
-      <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-11-02
-    </span>
-    <span>
-      <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a>
-    </span>
     
-  </div>
-</div>   
     
-
-
-
-      
-      
-  <div class="post-tags">
     
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E9%9D%A2%E8%AF%95/ >面试</a>
-      </i>
-    
-  </div>
-
-      
-      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
-        <div class="post-abstract mdui-typo ">
-          
-            <h1 id="要解决的问题"><a href="#要解决的问题" class="headerlink" title="要解决的问题"></a>要解决的问题</h1><ul>
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="要解决的问题"><a href="#要解决的问题" class="headerlink" title="要解决的问题"></a>要解决的问题</h1><ul>
 <li>ByteArrayOutputStream </li>
 </ul>
 <h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><ul>
 <li>String为什么不可变？<ul>
-<l...
-          
-        </div>
-        
-        <div style="text-align:center;">
-          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/">阅读更多</a>
-        </div>
-      </div>
-    </article>
+<li>简单来说，String底层的存储结构为<code>private final char[] value;</code>数组，JDK9之后改为了<code>private final byte[] value</code>，设计思想就是不让String可变，String内部的方法，比如concat拼接方法，replace()替换字符的方法，最后都返回了新的String对象。所以说String是不可变的。</li>
+</ul>
+</li>
+<li>StringBuilder和StringBuffer的区别？<ul>
+<li>StringBuilder和StringBuffer都继承自AbstractStringBuilder,在源码中：AbstractStringBuilder实现了Appendable和CharSequence方法，具体的存储结构是<code>char[] value</code>数组，并且定义了一个数组的最大值为<code>Integer.MAX_VALUE-8</code>，不管是在初始化还是扩容过程中超过这个容量都会抛出异常。</li>
+<li>扩容过程：<ul>
+<li>先调用<code>ensureCapacity(minCapacity)</code>方法，如果minCapacity是负数，则改方法没有任何作用，只会简单的返回。</li>
+<li>如果是正数，则继续调用<code>ensureCapacityInternal（）</code>的<code>private</code>方法，在该方法中调用<code>Arrays.copyOf()</code>方法实现真正的扩容。</li>
+<li><code>Arrays.copyOf()</code>方法中调用<code>newCapacity</code>方法，扩容后的容量为原来的<code>value.length</code>+2和需要的容量的最小值。</li>
+<li>如果扩容的容量太大，超过了规定的最大值，也就是<code>Integer.MAX_VALUE-8</code>，则比较需要的容量<code>minCapacity</code>和最大值的大小，如果minCapacity超过Integer.MAX_VALUE的值，则直接抛出<code>OutOfMemory</code>异常。否则返回minCapacity和规定最大值的较大值。</li>
+</ul>
+</li>
+<li>StringBuffer：since jdk1.0。所有的方法都有同步效果，或者是加了同步关键字，或者是通过方法之间的相互调用达到了同步的效果。</li>
+<li>StringBuilder:since jdk1.5。没有同步效果，效率高于StringBuffer.</li>
+<li>默认创建的数组大小都是16或者原来的大小加16.</li>
+</ul>
+</li>
+<li>在以下4种情况下，finally块不会被执行：<ol>
+<li>在finally语句块第一行发生了异常。（因为在其它行，finally块还是会等到执行）</li>
+<li>在前面的代码中用了System.exit(int)已退出程序。exit()是带参函数；若该语句在异常语句之后，finally块会执行</li>
+<li>程序所在的线程死亡</li>
+<li>关闭CPU</li>
+</ol>
+</li>
+</ul>
+<h2 id="数据结构的基本概念"><a href="#数据结构的基本概念" class="headerlink" title="数据结构的基本概念"></a>数据结构的基本概念</h2><ul>
+<li><p><strong>数据</strong>：信息的载体，是描述客观事物属性的数、字符及所有能输入到计算机中并被计算机程序识别和处理的符号的集合</p>
+</li>
+<li><p><strong>数据对象</strong>：具有相同性质的数据元素的集合，是数据的一个子集。</p>
+</li>
+<li><p><strong>数据元素</strong>：数据的基本单位，通常作为一个整体进行考虑和处理</p>
+</li>
+<li><p><strong>数据项</strong>：构成数据元素的不可分割的最小单位。</p>
+</li>
+<li><p><strong>循环队列</strong>：关键是<strong>取余(%MaxSize)</strong></p>
+<p>front指针移动：<code>Q.front = (Q.front+1)%MaxSize</code></p>
+<p>rear指针移动：<code>Q.rear = (Q.rear+1)%MaxSize</code></p>
+<p>队列长度：<code>(Q.rear-Q.front+MaxSize)%Maxsize</code></p>
+<p>队空条件：<code>Q.front==Q.rear</code></p>
+<p>队满条件：<code>Q.front==Q.rear</code></p>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span></code></pre>
+<p><strong>解决方法：</strong></p>
+<ul>
+<li>方法1：牺牲一个存储单元： 少存放一个元素；判断队满：<code>Q.front==(Q.rear+1)%MaxSize</code></li>
+<li>方法2：增加一个计数变量</li>
+<li>方法3：增加tag标识（队空是由于出队引起的，队满是由于入队引起的）；队空条件：<code>Q.front==Q.rear&amp;&amp;tag==0</code>；队满条件：<code>Q.front==Q.rear&amp;&amp;tag==1</code></li>
+</ul>
+</li>
+<li><p>栈的出栈序列个数：<br>$$<br>f(n)=\frac{n+1}{C_{2n}^n}<br>$$<br>递推公式：<br>$$<br>f(k)=f(k-1)+f(n-k)<br>$$</p>
+</li>
+<li><p>栈的应用：</p>
+<ol>
+<li>括号匹配：<ol>
+<li>初始一个空栈，顺序读入括号</li>
+<li>若是右括号，则与栈顶元素进行匹配<ol>
+<li>若匹配，则弹出栈底元素并进行下一个元素</li>
+<li>若不匹配，则该序列不合法</li>
+</ol>
+</li>
+<li>若是左括号，则压入栈中</li>
+<li>若全部元素遍历完毕，栈中非空则序列不合法</li>
+</ol>
+</li>
+<li>表达式求值：</li>
+<li>中缀转前缀：  </li>
+<li>中缀转后缀：<ol>
+<li>数字直接加入后缀表达式</li>
+<li>运算符时：<ol>
+<li>若为“（”，入栈</li>
+<li>若为“）”，则依次把栈中的运算符加入后缀表达式，直到出现“（”，并从栈中删除“（”</li>
+</ol>
+</li>
+<li>若为+，-，*，/，<ol>
+<li>栈空，入栈</li>
+<li>栈顶元素为“（”，入栈</li>
+<li>高于栈顶元素优先级，入栈</li>
+<li>否则，依次弹出栈顶运算符，直到一个优先级比它低的运算符或“（”为止</li>
+</ol>
+</li>
+<li>遍历完成，若栈非空依次弹出所有元素</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><strong>矩阵的压缩存储</strong></p>
+<ul>
+<li><p><strong>压缩存储</strong>：指多个值相同的元素只分配一个存储空间，对零元素不分配存储空间</p>
+</li>
+<li><p><strong>特殊矩阵</strong>：指具有许多相同矩阵元素或零元素，并且这些相同矩阵元素或零元素的分布具有一定的规律性</p>
+</li>
+<li><p><strong>特殊矩阵的压缩存储</strong>：找出特殊矩阵中值相同的矩阵元素的分布规律，把那些呈现规律性分布、值相同的多个矩阵元素压缩存储到一个存储空间上</p>
+</li>
+<li><p>三对角矩阵的数组下标：<br>$$<br>3*(i-1)-1+(j-i)+1+1-1<br>$$<br>化简后为：<br>$$<br>2i+j-3<br>$$<br>若k已知，求i,j?<br>$$<br>i= \left\lfloor (k+1)/3+1\right\rfloor<br>$$</p>
+<p>$$<br>j=k+3-2i<br>$$</p>
+</li>
+</ul>
+</li>
+<li><p><strong>稀疏矩阵</strong>：矩阵元素个数S相对于矩阵中非零元素的个数T来说非常多，即S&gt;&gt;t的矩阵称为稀疏矩阵</p>
+</li>
+<li><p><strong>三元组</strong>：(行标，列标，值)</p>
+</li>
+<li><p><strong>树的度</strong>：树中最大度数称为树的度</p>
+</li>
+<li><p><strong>度数为2的树与二叉树的区别：</strong></p>
+<ul>
+<li>度数为2的树最少有3个节点 二叉树可以有0个节点</li>
+<li>度数为2的有序树的孩子节点的左右是相对的</li>
+</ul>
+</li>
+<li><p><strong>满二叉树</strong>：每一层的满</p>
+</li>
+<li><p><strong>完全二叉树</strong>：前一层是满二叉树</p>
+</li>
+<li><p><strong>二叉排序树</strong>：左子树节点的关键字均小于根节点，右子树节点均大于根节点</p>
+</li>
+<li><p><strong>平衡二叉树</strong>：左子树和右子树的深度之差不超过1</p>
+</li>
+<li><p><strong>中序遍历非递归算法</strong>：</p>
+<ul>
+<li>初始时，依次扫描根节点的所有左侧节点并将它们一一进栈</li>
+<li>出栈一个节点，访问它</li>
+<li>扫描该节点的右孩子节点并将其进栈</li>
+<li>依次扫描右孩子节点的所有左侧节点并一一进栈</li>
+<li>反复该过程直到栈空为止</li>
+</ul>
+</li>
+<li><p><strong>二叉树的层次遍历：</strong></p>
+<ul>
+<li>初始时将根入队并访问根节点，然后出队</li>
+<li>若有左子树，则将左子树的根入队</li>
+<li>若有右子树，则将右子树的根入队</li>
+<li>然后出队，访问该节点</li>
+<li>反复该过程直到队列空为止</li>
+</ul>
+</li>
+<li><p><strong>树的线索化</strong>：（线索链表、线索二叉树）</p>
+<ul>
+<li>若无左子树，则将左指针指向其前驱节点</li>
+<li>若无右子树，则将右指针指向其后继节点</li>
+</ul>
+</li>
+</ul>
+<h3 id="树的存储结构"><a href="#树的存储结构" class="headerlink" title="树的存储结构"></a>树的存储结构</h3><ul>
+<li>双亲表示法：采用一组连续的存储空间来存储每个节点，同时在每个节点中增设一个伪指针，指示双亲节点在数组中的位置。根节点的下标为0，其伪指针域为-1。</li>
+<li>孩子表示法：将每个节点的孩子节点都用单链表连接起来形成一个线性结构，n个孩子具有n个孩子链表。</li>
+<li>孩子兄弟表示法：以二叉链表作为树的存储结构，又称二叉树表示法。<strong>（左孩子右兄弟表示法）</strong> （节点第一个孩子的节点指针，节点值，节点下一个兄弟节点指针）</li>
+</ul>
+<h3 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h3><p>无中序遍历</p>
+<p>树的先根遍历序列和二叉树的先根遍历序列相同。</p>
+<p>树的后根遍历序列和二叉树的中根遍历序列相同。</p>
+<h3 id="森林的遍历"><a href="#森林的遍历" class="headerlink" title="森林的遍历"></a>森林的遍历</h3><p> 先序和中序遍历</p>
+<p>森林的中序遍历序列与森林对应二叉树的中序遍历序列相同</p>
+<h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><p>一种简单的集合表示。</p>
+<p>通常用树的双亲表示法作为并查集的存储结构。</p>
+<h3 id="二叉排序树"><a href="#二叉排序树" class="headerlink" title="二叉排序树"></a>二叉排序树</h3><p>二叉排序树的中序遍历序列是一个递增的有序序列</p>
+<p><strong>二叉排序树的删除</strong>：</p>
+<p>用中序序列的直接后继代替被删除节点</p>
+<h3 id="平衡二叉树（AVL树）"><a href="#平衡二叉树（AVL树）" class="headerlink" title="平衡二叉树（AVL树）"></a>平衡二叉树（AVL树）</h3><p>高度为h的最小平衡二叉树的节点数$N_h$</p>
+<p>递推公式：$N_h=N_{h-1}+N_{h-2}+1 （N_0=0,N_1=1）$</p>
+<p>平衡二叉树的判断：利用递归的后序遍历。</p>
+<h3 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h3><p>树的带权路径长度：$WPL=\sum_{i=0}^{n}w_il_i$</p>
+<p><strong>哈夫曼树</strong>：也称最优二叉树，含有N个带权叶子节点带权路径长度最小的二叉树</p>
+<p>n个叶子节点的哈夫曼树的节点总数为2n-1,度为2的节点数为n-1。</p>
+<p><strong>前缀编码：</strong>没有一个编码是另一个编码的前缀</p>
+<p><em>哈夫曼树并不唯一，所以每个字符对应的哈夫曼编码也不唯一，但带权路径长度相同且最优</em></p>
+<h3 id="图"><a href="#图" class="headerlink" title="图"></a>图</h3><h4 id="图的存储结构"><a href="#图的存储结构" class="headerlink" title="图的存储结构"></a>图的存储结构</h4><ol>
+<li>邻接矩阵法（空间复杂度为$O(n^2)$）,适用于稠密图</li>
+<li>设图G的邻接矩阵为A，矩阵运算$A^n$的含义：$A^n[i][j]$表示从顶点$v_i$到顶点$v_j$的长度为n的路径条数</li>
+<li>邻接表法<ol>
+<li>为每个顶点建立一个单链表存放与它相邻的边</li>
+<li>适用于稀疏图</li>
+</ol>
+</li>
+<li>十字链表<ol>
+<li><strong>有向图</strong>的一种<strong>链式</strong>存储结构</li>
+<li>边表+顶点表</li>
+<li>十字链表例子：<img src="%E5%8D%81%E5%AD%97%E9%93%BE%E8%A1%A8%E4%BE%8B%E5%AD%90.png"></li>
+</ol>
+</li>
+<li>邻接多重表<ol>
+<li><strong>无向图</strong>的一种<strong>链式</strong>存储结构</li>
+<li>邻接多重表例子：<img src="%E9%82%BB%E6%8E%A5%E5%A4%9A%E9%87%8D%E8%A1%A8%E4%BE%8B%E5%AD%90.png"></li>
+</ol>
+</li>
+</ol>
+<h3 id="图的广度优先搜索"><a href="#图的广度优先搜索" class="headerlink" title="图的广度优先搜索"></a>图的广度优先搜索</h3><p>代码：<img src="%E5%9B%BE%E7%9A%84%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2.png"></p>
+<p><strong>应用：</strong>可以利用图的广度优先搜索求无权图单源最短路径问题。</p>
+<h4 id="无权图单源最短路径问题"><a href="#无权图单源最短路径问题" class="headerlink" title="无权图单源最短路径问题"></a>无权图单源最短路径问题</h4><p><img src="%E6%97%A0%E6%9D%83%E5%9B%BE%E5%8D%95%E6%BA%90%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98.png"></p>
+<h3 id="图的深度优先搜索"><a href="#图的深度优先搜索" class="headerlink" title="图的深度优先搜索"></a>图的深度优先搜索</h3><p><img src="%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2.png"></p>
+<h4 id="遍历与连通性问题"><a href="#遍历与连通性问题" class="headerlink" title="遍历与连通性问题"></a>遍历与连通性问题</h4><p>在无向图中，在任意节点出发进行一次遍历（调用一次BFS或DFS），若能访问全部节点，说明该无向图是连通的。</p>
+<p>在无向图中，调用遍历函数的次数为连通分量的个数。</p>
+<p><strong>以上两个结论只适用于无向图，在有向图中都不成立。</strong></p>
+<h3 id="图的应用"><a href="#图的应用" class="headerlink" title="图的应用"></a>图的应用</h3><h4 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h4><p>生成树：连通图包含全部顶点的一个极小连通子图</p>
+<p>对于带权的无向联通图$G=(V,E),G$的所有生成树当中边的权值最小的生成树为G的最小生成树(MST)。</p>
+<p><code>Prim</code>算法：（贪心算法）</p>
+<p><img src="Prim%E7%AE%97%E6%B3%95.png"></p>
+<p>该算法的时间复杂度为$O(|V|^2)$，因此适用于稠密图</p>
+<p>克鲁斯卡尔算法：</p>
+<p><img src="%E5%85%8B%E9%B2%81%E6%96%AF%E5%8D%A1%E5%B0%94.png"></p>
+<p>时间复杂度为$O(|E|log|E|)$,所以更加适用于稀疏图。</p>
+<h3 id="单源最短路径问题"><a href="#单源最短路径问题" class="headerlink" title="单源最短路径问题"></a>单源最短路径问题</h3><h4 id="地杰斯特拉方法"><a href="#地杰斯特拉方法" class="headerlink" title="地杰斯特拉方法"></a>地杰斯特拉方法</h4><p><img src="%E5%9C%B0%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95%E5%87%86%E5%A4%87.png"></p>
+<p>地杰斯特拉算法不适用于含有负权值的边</p>
+<h4 id="Floyd方法"><a href="#Floyd方法" class="headerlink" title="Floyd方法"></a>Floyd方法</h4><h3 id="B树vsB-树"><a href="#B树vsB-树" class="headerlink" title="B树vsB+树"></a>B树vsB+树</h3><p><img src="B%E6%A0%91vsB+%E6%A0%91.png"></p>
+<h3 id="散列查找"><a href="#散列查找" class="headerlink" title="散列查找"></a>散列查找</h3><h4 id="散列函数"><a href="#散列函数" class="headerlink" title="散列函数"></a>散列函数</h4><p>一个把查找表中的关键字映射成该关键字对应的地址的函数。</p>
+<h3 id="KMP算法"><a href="#KMP算法" class="headerlink" title="KMP算法"></a>KMP算法</h3><h4 id="求next数组："><a href="#求next数组：" class="headerlink" title="求next数组："></a>求next数组：</h4><p><img src="KMP%E6%B1%82next%E6%95%B0%E7%BB%84.png"></p>
+<h4 id="KMP算法-1"><a href="#KMP算法-1" class="headerlink" title="KMP算法"></a>KMP算法</h4><p><img src="KMP%E7%AE%97%E6%B3%95.png"></p>
+<h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h3><h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><ol>
+<li><p>直接插入排序</p>
+<p>最好情况下复杂度为$O(n)$，最坏和平均情况下复杂度为$O(n^2)$,空间复杂度为$O(1)$，稳定。适合链表。</p>
+</li>
+<li><p>折半插入排序</p>
+<p>$O(n^2)$,稳定，只适用于顺序存储</p>
+</li>
+<li><p>希尔排序（缩小增量排序）</p>
+<p>最坏情况下：$O(n^2)$ 最好情况:$O(n^{1.3})$</p>
+<p>不稳定。顺序存储。 辅助空间：$O(1)$</p>
+</li>
+</ol>
+<h4 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h4><ol>
+<li><p>冒泡排序</p>
+<p>基本思想：</p>
+<p>假设待排序表长为n，从后往前（从前往后）两两比较相邻元素的值，若为逆序（即$A[i-1]&gt;A[i]$），则交换他们直到序列比较结束。</p>
+<p>最好：$O(n)$</p>
+<p>最坏和平均：$O(n^2)$</p>
+<p>空间复杂度：$O(1)$</p>
+<p>稳定，顺序存储和链式存储</p>
+</li>
+<li><p>快速排序</p>
+<p>选取基准。 </p>
+<p>一次划分会将一个元素pivot放置到它最终的位置上。</p>
+<p>不稳定。</p>
+<p>$O(high-low+1)$</p>
+<p><img src="%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F.png"></p>
+<p>最好、平均空间复杂度$O(log_2n)$</p>
+<p>最好、平均空间复杂度$O(nlog_2n)$</p>
+<p>初始基本有序或逆序：</p>
+<p>最坏情况空间复杂度$O(n)$</p>
+<p>最坏时间复杂度$O(n^2)$</p>
+</li>
+</ol>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><ol>
+<li><p>直接选择排序</p>
+<p>一趟排序会将一个元素放置在最终的位置上。</p>
+<p><img src="%E7%9B%B4%E6%8E%A5%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.png"></p>
+<p>时间复杂度与初始序列无关：$O(n^2)$</p>
+<p>空间$O(1)$</p>
+<p>顺序存储和链式存储</p>
+</li>
+<li><p>堆排序</p>
+<p>大根堆和小根堆</p>
+<p><img src="%E5%A0%86%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96.png"></p>
+<p>时间复杂度：$O(nlog_2n)$</p>
+<p>空间复杂度：$O(1)$</p>
+<p>不稳定，顺序存储（链式存储）</p>
+</li>
+</ol>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><ol>
+<li><p>二路归并排序</p>
+<p>时间复杂度：$O(nlog_2n)$  稳定 顺序存储和链式存储</p>
+<p>空间复杂度：$O(n)$</p>
+</li>
+</ol>
+<h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4><p>​    <strong>不基于比较，借助“分配”和“收集”两种操作堆单逻辑关键字进行排序，分为最高位优先（MSD）和最低位优先(LSD)</strong></p>
+<p><img src="%E5%9F%BA%E6%95%B0%E6%8E%92%E5%BA%8F.png"></p>
+<p>时间复杂度：$O(d(n+r))$</p>
+<p>空间复杂度：$O(r)$</p>
+<p>稳定，不基于比较</p>
+<h3 id="内部排序算法比较"><a href="#内部排序算法比较" class="headerlink" title="内部排序算法比较"></a>内部排序算法比较</h3><table>
+<thead>
+<tr>
+<th align="center">排序算法</th>
+<th>时空复杂度</th>
+<th>稳定性</th>
+<th>一趟排序的特点</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">直接插入排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">折半插入排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">希尔排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">冒泡排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">快排</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">直接选择排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">堆排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">二路归并排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">基数排序</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="%E5%86%85%E9%83%A8%E6%8E%92%E5%BA%8F%E6%AF%94%E8%BE%83%E5%92%8C%E5%BA%94%E7%94%A8.png"></p>
+<h3 id="外部排序"><a href="#外部排序" class="headerlink" title="外部排序"></a>外部排序</h3><p>通常采用<strong>归并排序方法</strong></p>
+<hr>
+<h1 id="Java整理"><a href="#Java整理" class="headerlink" title="Java整理"></a>Java整理</h1><h2 id="常量池"><a href="#常量池" class="headerlink" title="常量池"></a>常量池</h2><p>Byte:-128,127</p>
+<p>Character：&lt;=127</p>
+<p>Integer:-128,127</p>
+<p>Short:-128,127</p>
+<p>Long:-128,127</p>
+<p>Boolean: true或者false,注意此处忽略大小写，IgnoreCase</p>
+<p>Double:</p>
+<p>Float:</p>
+<p>总结：Byte,Integer,Short,Long的常量池为[-128,127]</p>
+<p>​    Character的常量池为[0,127]</p>
+<p>​    Boolean的常量池为true/false</p>
+<p>​    对于 == 运算符：</p>
+<p>​        如果两侧对象都是数值，则比较数值；</p>
+<p>​        如果两侧都是包装类型，则比较地址值；</p>
+<p>​        如果一个是数值，一个是包装类型，则包装类型自动拆箱</p>
+<pre><code> 对于 + 运算符：</code></pre>
+<p>​        包装类型自动拆箱。</p>
+<h2 id="RandomAccessFile"><a href="#RandomAccessFile" class="headerlink" title="RandomAccessFile"></a>RandomAccessFile</h2><h3 id="特殊之处"><a href="#特殊之处" class="headerlink" title="特殊之处"></a>特殊之处</h3><ul>
+<li>直接继承于<code>java.io.Object</code>类，而不是继承于四个流</li>
+<li>文件是从头覆盖的</li>
+</ul>
+<h2 id="位移运算符"><a href="#位移运算符" class="headerlink" title="位移运算符"></a>位移运算符</h2><blockquote>
+<p>&lt;&lt;    &gt;&gt;    &gt;&gt;&gt;    &amp;    |    ^(异或)    ~</p>
+<p><strong>注意：没有无符号左移</strong></p>
+</blockquote>
+<h2 id="StringBuffer和StringBuilder"><a href="#StringBuffer和StringBuilder" class="headerlink" title="StringBuffer和StringBuilder"></a><code>StringBuffer</code>和<code>StringBuilder</code></h2><ol>
+<li><p><code>String:</code>jdk1.0 不可变的字符序列<img src="Java/String%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7.png" alt="String不可变性.png"></p>
+</li>
+<li><p><code>StringBuffer:</code></p>
+</li>
+</ol>
+<h3 id="String-StringBuilder和StringBuffer"><a href="#String-StringBuilder和StringBuffer" class="headerlink" title="String,StringBuilder和StringBuffer"></a><code>String</code>,<code>StringBuilder</code>和<code>StringBuffer</code></h3><ol>
+<li><code>String</code>: JDK1.0</li>
+<li><code>StringBuilder</code>:JDK1.5</li>
+<li><code>StringBuffer</code>:JDK1.0 线程安全 效率偏低<ol>
+<li> <code>StringBuffer</code>扩容过程：<code>StringBuffer</code>继承自<code>AbstractStringBuilder</code>,首先检查<code>count</code>+要增加的字符串的长度 与 <code>AbstractStringBuilder</code>中的<code>value.length</code>的大小关系（即<code>AbstractStringBuilder</code>中原有的value数组是否能够放下修改后的长度），这个比较是通过<code>AbstractStringBuilder</code>中的<code>ensureCapacityInternal(int newLength)</code>方法来完成的。</li>
+<li><code>AbstractStringBuilder</code>中的<code>ensureCapacityInternal(int minumCapacity)</code>方法：<ol>
+<li> <em>该方法的功能是：**</em>真正的扩容数组。如果新的<code>Capacity</code>大于原有的长度，则调用<code>newCapacity()</code>方法进行扩容；否则不进行处理。**</li>
+<li> 比较新的长度和原来的<code>value.length</code>，如果大于0，说明原来的长度不够，需要进行扩容。如果不进行扩容，改方法不进行任何操作，直接返回。如果需要扩容，则进入<code>newCapacity(int minumCapacity)</code>方法。</li>
+</ol>
+</li>
+<li><code>AbstractStringBuilder</code>中的<code>newCapacity(int minumCapacity)</code>方法：<ol>
+<li> <em>该方法的功能：</em>真正的进行扩容，进行数组长度的改变。</li>
+<li> 先将原来的$value数组的长度 <em>2+2$,与需要的长度进行比较，<del>如果不够用，则将新的长度设置为需要的长度，并进行返回。如果够用，则长度 * 2 + 2就是新的长度。</del>*</em>($原来底层数组的长度*2+2$后，取这个长度与<code>minCapacity</code>中的较大值。)**进行返回。</li>
+<li> 然后调用<code>Arrays.CopyOf()</code>方法，进行复制。</li>
+<li>针对大数组的处理：<ol>
+<li> 如果需要的长度&gt;int上界，直接报<code>OutOfMemoryError</code></li>
+<li> 否则返回<code>AbstractStringBuilder</code>允许的数组最大值和<code>minCapacity</code>中的最大值。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="JDK1-8之前的时间API"><a href="#JDK1-8之前的时间API" class="headerlink" title="JDK1.8之前的时间API"></a><code>JDK1.8</code>之前的时间API</h3><pre class=" language-java"><code class="language-java">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>System<span class="token punctuation">.</span><span class="token function">currentTimeMillis</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//返回当前与1970年1月1日0时0分的时间差 的毫秒数</span></code></pre>
+<ol>
+<li><p><code>java.util.Date</code>类：</p>
+<ol>
+<li>两个构造器的使用（怎么造对象）<ol>
+<li><code>Date()</code></li>
+<li><code>Date(long)</code></li>
+</ol>
+</li>
+<li>两个方法的使用<ol>
+<li><code>toString()</code>：显示当前的年月日时分秒</li>
+<li><code>getTime()</code>：显示时间戳</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><code>java.sql.Date</code>类：</p>
+<ol>
+<li></li>
+</ol>
+</li>
+<li><p><code>SimpleDateFormat</code></p>
+<ol>
+<li><p>解析：字符串-&gt;Date</p>
+<p>格式化：Date-&gt;字符串</p>
+</li>
+</ol>
+</li>
+<li><p><code>Calendar</code>类</p>
+<ol>
+<li>方式一：创建子类(GregorianCalendar)的对象</li>
+<li>方式二：调用其静态方法getInstance()</li>
+<li>常用方法：<ol>
+<li>get()</li>
+<li>set()</li>
+<li>add()</li>
+<li>getTime()/setTime()</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="jdk1-8之后的API"><a href="#jdk1-8之后的API" class="headerlink" title="jdk1.8之后的API"></a>jdk1.8之后的API</h3><ol>
+<li><p>LocalTime</p>
+</li>
+<li><p>LocalDate</p>
+</li>
+<li><p>LocalDateTime：相较于其它两个用的多</p>
+<ol>
+<li>now()</li>
+<li>of(int,int,int)</li>
+<li>getXxx()</li>
+<li>with(int)</li>
+<li>plusXxx(long)</li>
+<li>minus()</li>
+</ol>
+</li>
+<li><p>Instant</p>
+<ol>
+<li>时间线上的一个瞬时点。这可能被用来记录应用程序中的时间戳</li>
+<li>Instant常用方法：<img src="Instant%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95.png"></li>
+</ol>
+</li>
+<li><p><code>java.time.format.DateTimeFormatter</code>:用来格式化或解析时间的、类似 于<code>SimpleDateFormat</code></p>
+<ol>
+<li><p><img src="DateTimeFormatter.png"></p>
+</li>
+<li><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dateTimeFormatterTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//方式一： 预定义的标准格式。如ISO_LOCAL_DATE,ISO_LOCAL_TIME,ISO_LOCAL_DATE_TIME</span>
+        DateTimeFormatter dateTimeFormatter <span class="token operator">=</span> DateTimeFormatter<span class="token punctuation">.</span>ISO_LOCAL_DATE_TIME<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//格式化</span>
+        LocalDateTime localDateTime <span class="token operator">=</span> LocalDateTime<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>String format <span class="token operator">=</span> dateTimeFormatter<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span>localDateTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>localDateTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>format<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="与传统日期处理的转换"><a href="#与传统日期处理的转换" class="headerlink" title="与传统日期处理的转换"></a>与传统日期处理的转换</h3><p><img src="%E4%B8%8E%E4%BC%A0%E7%BB%9F%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86%E7%9A%84%E8%BD%AC%E6%8D%A2.png"></p>
+<h3 id="Java比较器"><a href="#Java比较器" class="headerlink" title="Java比较器"></a>Java比较器</h3><p>像String、包装类等实现了Comparable接口，重写了compareTo()方法</p>
+<p>重写compareTo方法的规则：</p>
+<p>小于返回负数，等于返回0，大于返回正整数。</p>
+<h3 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h3><ol>
+<li>基本数据类型转换为包装类<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+<h3 id="访问接口中的方法"><a href="#访问接口中的方法" class="headerlink" title="访问接口中的方法"></a>访问接口中的方法</h3><p><code>CompareA.super.method1();</code></p>
+<h3 id="枚举类"><a href="#枚举类" class="headerlink" title="枚举类"></a>枚举类</h3><ol>
+<li><code>jdk5.0</code>之前，自定义枚举类</li>
+<li><code>jdk5.0</code>之后，使用<code>enum</code>关键字</li>
+</ol>
+<h3 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h3><ol>
+<li><p>Override</p>
+</li>
+<li><p>Deprecated</p>
+</li>
+<li><p>SuppressWarnings（”unused”,”rawtypes”）</p>
+</li>
+<li><p>如何自定义注解</p>
+<p><img src="%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3.png"></p>
+</li>
+<li><p><strong>自定义注解必须配合注解处理流程才有意义，一般指明Retention和Target</strong></p>
+</li>
+<li><p>JDK5.0提供的四个元注解：</p>
+<ol>
+<li><p>Retention</p>
+<p><img src="Retention.png"></p>
+</li>
+<li><p>Target</p>
+</li>
+<li><p>Documented</p>
+</li>
+<li><p>Inherited</p>
+</li>
+</ol>
+</li>
+<li><p>JDK8 中注解的新特性</p>
+<ol>
+<li><p>可重复注解<code>@Repeatable</code></p>
+</li>
+<li><p>类型注解</p>
+<p><img src="%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3.png"></p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><ol>
+<li><p><code>Collection</code>:</p>
+<ol>
+<li><p>单列集合</p>
+</li>
+<li><p>List</p>
+<ol>
+<li>ArrayList:主要实现类，线程不安全的，效率高；底层是Object类型数组</li>
+<li>LinkedList：对于频繁的插入和删除操作，此类效率比ArrayList高； 底层使用双向链表存储</li>
+<li>Vector：作为List的古老实现类，线程安全的，效率低；底层是Object类型数组</li>
+</ol>
+</li>
+<li><p>Set</p>
+</li>
+<li><p>Collection接口继承树</p>
+<p><img src="Collection%E6%8E%A5%E5%8F%A3%E7%BB%A7%E6%89%BF%E6%A0%91.png"></p>
+</li>
+<li><p><code>removeAll():</code>求差集</p>
+</li>
+<li><p><code>retainAll():</code>求交集 并修改当前集合</p>
+</li>
+</ol>
+</li>
+<li><p><code>Map</code></p>
+<ol>
+<li><p>Map接口继承树</p>
+<p><img src="Map%E6%8E%A5%E5%8F%A3%E7%BB%A7%E6%89%BF%E6%A0%91.png"></p>
+</li>
+<li><p>双列集合 key-value对</p>
+</li>
+<li><p>HashMap和LinkedHashMap的内部类</p>
+<p><img src="HashMap%E5%92%8CLinkedHashMap%E7%9A%84%E5%86%85%E9%83%A8%E7%B1%BB.png"></p>
+</li>
+<li><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+     *  |----Map接口的说明：双列数据，存储key-value对的数据
+     *      |----HashMap:作为Map的主要实现类，线程不安全的，效率高; 可以存储null的key和value
+     *           |----LinkedHashMap:保证在遍历元素的时候，可以按照添加的顺序进行遍历
+     *                  原因：在原有的HashMap的底层结构上，添加了一对指针，指向前一个和后一个元素
+     *                  对于频繁的遍历操作，此类执行效率高于HashMap
+     *      |----TreeMap:保证按照添加的顺序进行排序
+     *              底层使用的红黑树
+     *      |----Hashtable:作为古老的实现类；线程安全的，效率低; 不能存储null的key和value
+     *          |----Properties:常用来处理配置文件。key和value都是String类型
+     *
+     *
+     *
+     *   HashMap的原理：数组加链表（jdk7以前）
+     *                  数组加链表加红黑树（jdk8）
+     *
+     *
+     *    面试题：
+     *    1.HashMap的底层实现原理？
+     *    2.HashMap和Hashtable的异同？
+     *    3.CurrentHashMap与Hashtable的异同？
+     *
+     *
+     *
+     *    二、Map结构的理解：
+     *     Map中的key：无序的、不可重复的，使用Set存储所有的key
+     *     Map中的value:无序的、可重复的，使用Collection存储所有的value
+     *     一个键值对key-value用一个Entry来存储
+     *     Map中的Entry:无序的、不可重复的，使用Set存储所有的entry
+     *
+     *
+     *     三：HashMap的底层实现原理：（以Jdk7为例说明）
+     *     HashMap map = new HashMap();
+     *     在实例化以后，底层创建了长度是16的一维数组Entry[] table.
+     *     ......
+     *     map.put(key1,value1);
+     *     首先,计算key1的哈希值,经过某种算法,得到在Entry数组中的存放位置
+     *
+     *
+     *      黙认的扩容方式为:扩容为原来的2倍
+     *          如果当前的size 超过了阈值 且 要放的位置上有元素,就要扩容(7上)
+     *
+     *      JDk8:
+     *      1.new HashMap(); 底层没有创建一个长度为16的数组
+     *      2.jdk8 底层的数组为Node[],而非Entry[]
+     *      3.首次调用put()方法时,底层创建长度为16的数组
+     *      4.jdk7中底层:数组+链表
+     *        jdk8中:数组+链表+红黑树
+     *        当数组的某上个索引位置上的元素以链表形式存在的数据个数 > 8 且 数组当前的长度超过64,
+     *        此索引位置上的所有数据改为红黑树存储.
+     *
+     *     四:LinkedHashMap的底层原理(了解)
+     *
+     *
+     *      HashMap.Node subclass for normal LinkedHashMap entries.
+     *
+     *
+
+     *       static class Entry&lt;K, V> extends HashMap.Node&lt;K, V> {
+     *
+     *           Entry&lt;K, V> before, after;//能够记录添加元素的先后顺序
+     *           Entry(int hash, K key, V value, Node&lt;K, V> next) {
+     *                  super(hash, key, value, next);
+     *                  }
+     *
+     *         }
+     *
+     */</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">MapTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        Map map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>null<span class="token punctuation">,</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        Map map1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Hashtable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map1<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>null<span class="token punctuation">,</span>null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>      }
+  ```</code></pre>
+<ol start="3">
+<li><p><code>Properties</code></p>
+<ol>
+<li></li>
+</ol>
+</li>
+<li></li>
+</ol>
+<h3 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * Collections:操作Collection、Map的工具类
+ *
+ * 面试题：Collection和Collections的区别？
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CollectionsTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        List list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">43</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">765</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">97</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        List list1 <span class="token operator">=</span> Arrays<span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">[</span>list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//反转</span>
+        Collections<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//随机化</span>
+        Collections<span class="token punctuation">.</span><span class="token function">shuffle</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//自然排序</span>
+        Collections<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list1<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Collections<span class="token punctuation">.</span><span class="token function">copy</span><span class="token punctuation">(</span>list1<span class="token punctuation">,</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><ul>
+<li><code>JDK5.0</code>新增的</li>
+<li>泛型类</li>
+<li>泛型方法</li>
+</ul>
+<h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><ul>
+<li>Java反射机制提供的功能<ul>
+<li><img src="Java%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E6%8F%90%E4%BE%9B%E7%9A%84%E5%8A%9F%E8%83%BD.png"></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Java集合底层"><a href="#Java集合底层" class="headerlink" title="Java集合底层"></a>Java集合底层</h1><h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><ol>
+<li><p>在JDK７　和JDK8 中效果不同</p>
+</li>
+<li><p>JDK7：</p>
+</li>
+<li><p>JDK8中：</p>
+<ol>
+<li><p>底层的Object[]初始化为<code>DEFAULTCAPACITY_EMPTY_ELEMENTDATA</code></p>
+<p>add（）第一次调用时才创建数组</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3><p>双向链表</p>
+<h3 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h3><p>同步</p>
+<h3 id="List的遍历方式："><a href="#List的遍历方式：" class="headerlink" title="List的遍历方式："></a><code>List</code>的遍历方式：</h3><pre class=" language-java"><code class="language-java"> <span class="token comment" spellcheck="true">//List遍历的方式</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">TraverseTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//方式一：迭代器方式</span>
+        Iterator iterator <span class="token operator">=</span> list<span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">hasNext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>iterator<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-  </main>
-  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
-  <div class="mdui-container">
-    <div class="mdui-row">
+        <span class="token comment" spellcheck="true">//方式二：增强for循环</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>Object object<span class="token operator">:</span>list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>object<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment" spellcheck="true">//方式三：普通的for循环</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> list<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><pre class=" language-yaml"><code class="language-yaml">/**
+     * Set接口的实现类：
+     * /<span class="token punctuation">---</span><span class="token punctuation">-</span>Set接口：存储无序的、不可重复的数据
+     *      /<span class="token punctuation">---</span><span class="token punctuation">-</span>HashSet<span class="token punctuation">:</span>作为Set接口的主要实现类；线程不安全的；可以存储Null值
+     *          /<span class="token punctuation">---</span><span class="token punctuation">-</span>LinkedHashSet：HashSet的子类，遍历其内部数据时，可以按照添加的顺序遍历
+     *      /<span class="token punctuation">---</span><span class="token punctuation">-</span>TreeSet：可以按照添加对象的指定属性，进行排序
+     *
+     *
+     * 底层：链表+数组
+     * 要求：向Set中添加的数剧，其所在的类一定要重写hashcode()和equals()方法
+     *       并且hashcode()和equals()尽可能保持一致性：“相等的对象必须具有相等的散列码”
+     *
+     *
+     * Set接口中没有额外定义的方法（都是Collection接口中的方法）
+     *
+     * HashSet添加元素的过程：
+     * 我们向HashSet中添加元素a，首先调用元素a所在类的hashCode()方法，计算元素a的哈希值，
+     * 此哈希值接着通过某种算法计算出在Hashset底层数组中的存放位置（即为：索引位置），判断
+     * 数组此位置上是否已经有其它元素：
+     * 如果此位置上没有其它元素，则元素a添加成功
+     * 如果此位置上有其它元素b(或以链表形式存在的多个元素)，则比较元素a与元素b的哈希值：
+     *      如果hash值不同，则元素a添加成功。
+     *      如果hash什相同，进而要调用元素a所在类的equals()方法：
+     *          equals()返回true<span class="token punctuation">,</span>元素a igdn lk rw mty 添加失败；
+     *          equals()返回false<span class="token punctuation">,</span>元素添加成功
+     *
+     *
+     *  jdk7<span class="token punctuation">:</span>a放到数组中，指向原来的元素
+     *  jdk8<span class="token punctuation">:</span>原来的元素放到数组中，指向元素a
+     */
+    @Test
+    public void SetTest()<span class="token punctuation">{</span>
+//        Arrays.hashCode()
+        String a = new String("a");
+        String b =new String("a");
+        System.out.println(a==b);
+        System.out.println(a.equals(b));
+        System.out.println(a.hashCode());
+        System.out.println(b.hashCode());
+
+    <span class="token punctuation">}</span></code></pre>
+<h3 id="LinkedHashSet"><a href="#LinkedHashSet" class="headerlink" title="LinkedHashSet"></a>LinkedHashSet</h3><pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+    *LinkedHashSet：怎为HashSet的子类，在添加数据的同时，每个数据还维护了两个引用，记
+    *  录此数据前一个数据和后一个数据。
+    *  目的：对于频繁的遍历操作，其效率高于HashSet
+    */</span></code></pre>
+<h3 id="hashcode-方法的重写"><a href="#hashcode-方法的重写" class="headerlink" title="hashcode()方法的重写"></a>hashcode()方法的重写</h3><p><img src="hashcode31.png"></p>
+<hr>
+<h1 id="Jdk7-新特性"><a href="#Jdk7-新特性" class="headerlink" title="Jdk7 新特性"></a>Jdk7 新特性</h1><ul>
+<li>类型推断</li>
+<li>try语句中资源的自动关闭<ul>
+<li>要求必须在try后面的小括号中进行初始化</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Java8新特性"><a href="#Java8新特性" class="headerlink" title="Java8新特性"></a>Java8新特性</h1><ul>
+<li><p>try-catch操作情况</p>
+<ul>
+<li><p>jdk 8 之前，普通形式</p>
+</li>
+<li><p>jdk 8中，资源的关闭操作：</p>
+<ul>
+<li><blockquote>
+<p>try( ):里面放需要关闭的资源</p>
+<p>要求：执行后必须关闭的资源必须在try子句中初始化，否则编译不通过</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Java9-新特性"><a href="#Java9-新特性" class="headerlink" title="Java9 新特性"></a>Java9 新特性</h1><ul>
+<li>钻石操作符可以在匿名实现类中使用</li>
+<li>try操作的升级<ul>
+<li>自动关闭的资源初始化可以放在try()外，此时资源是final的。（不可修改）</li>
+</ul>
+</li>
+<li>String底层存储结构变更<ul>
+<li>byte[]</li>
+</ul>
+</li>
+<li><h2 id="集合工厂方法"><a href="#集合工厂方法" class="headerlink" title="集合工厂方法"></a>集合工厂方法</h2></li>
+<li>InputStream中的transferTo()方法</li>
+</ul>
+<h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><h2 id="JVM类型"><a href="#JVM类型" class="headerlink" title="JVM类型"></a>JVM类型</h2><ol>
+<li>SUN Classic JVM<ol>
+<li>解释器和JIT不能同时使用</li>
+</ol>
+</li>
+<li>Exact VM<ol>
+<li>准确式内存管理</li>
+<li>具备现代高性能虚拟机的雏形<ol>
+<li>热点探测</li>
+<li>编译器和解释器混合工作模式</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Hotspot虚拟机<ol>
+<li>它的名称中的HotSpot指的就是它的热点代码探测技术</li>
+</ol>
+</li>
+<li>BEA公司的JRockit<ol>
+<li>专注于服务器端应用</li>
+</ol>
+</li>
+<li>IBM 的J9<ol>
+<li>有影响力的三大商用虚拟机之一</li>
+</ol>
+</li>
+<li>KVM和CDC/CLDC HotSpot<ol>
+<li>JavaME产品</li>
+</ol>
+</li>
+<li>Azul VM<ol>
+<li>高性能Java虚拟机中的战斗机</li>
+<li>与特定硬件平台绑定、软硬件配合的专有虚拟机</li>
+</ol>
+</li>
+<li>Liquid VM </li>
+<li>Apache Harmony</li>
+<li>Microsoft JVM</li>
+<li>TaobaoJVM </li>
+<li>Dalvik VM</li>
+<li>Graal VM</li>
+</ol>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><h3 id="获取类加载器的方法："><a href="#获取类加载器的方法：" class="headerlink" title="获取类加载器的方法："></a>获取类加载器的方法：</h3><ol>
+<li>利用<code>ClassLoader.getSystemClassLoader()</code>方法</li>
+<li>利用某个类的<code>getClassLoader()</code>方法</li>
+<li>获取线程的上下文加载器：<code>Thread.currentThread.getContextClassLoader()</code></li>
+<li>本地方法：<code>DriverManager.getCallerClassLoader()</code></li>
+</ol>
+<h2 id="JVM参数设置"><a href="#JVM参数设置" class="headerlink" title="JVM参数设置"></a>JVM参数设置</h2><ol>
+<li><p>-Xss:本地方法栈的大小</p>
+</li>
+<li><p>-Xms:堆的初始大小(年轻代+老年代) 等价于:<code>-XX:InitialHeapSize</code></p>
+</li>
+<li><p>-Xmx:堆的最大大小 等价于：<code>-XX:MaxHeapSize</code></p>
+</li>
+<li><p>默认<code>-XX:NewRatio=2</code>:表示新生代占1，老年代占2，新生代占整个堆的1/3.</p>
+<p>可以修改<code>-XX:NewRatio=4</code>:表示新生代占1，老年代占4，新生代占老年代的1/5.</p>
+</li>
+<li><p><code>-Xmn</code>:设置新生代的最大空间的大小</p>
+</li>
+<li><p><code>-XX:MaxTenuringThreshold=&lt;N&gt;</code>:设置什么时候去养老区</p>
+</li>
+<li><pre class=" language-java"><code class="language-java"><span class="token operator">-</span>XX<span class="token operator">:</span><span class="token operator">+</span>PrintFlagsInitial
+
+<span class="token operator">-</span>XX<span class="token operator">:</span><span class="token operator">+</span>PrintFlagsFinal
+
+<span class="token operator">-</span>Xmn<span class="token operator">:</span>设置新生代的大小
+
+<span class="token operator">-</span>MaxTenuringThreshold<span class="token operator">:</span>设置新生代的最大年龄
+
+<span class="token comment" spellcheck="true">//打印GC简要信息</span>
+<span class="token operator">-</span>XX<span class="token operator">:</span><span class="token operator">+</span>PrintGC
+
+<span class="token operator">-</span>verbose<span class="token operator">:</span>gc
+   <span class="token comment" spellcheck="true">//JDK7及以后，该参数不会再有实际影响，默认为true</span>
+<span class="token operator">-</span>XX<span class="token operator">:</span>HandlePromotionFailure<span class="token operator">:</span>是否设置空间分配担保
+<span class="token operator">-</span>XX<span class="token operator">:</span>UseTLAB<span class="token operator">:</span>设置是否开启TLAB
+<span class="token operator">-</span>XX<span class="token operator">:</span>TLABWasteTargetPercent<span class="token operator">:</span>设置TLAB空间所占用Edan空间的百分比
+<span class="token operator">-</span>XX<span class="token operator">:</span><span class="token operator">+</span>EliminateAllocation<span class="token operator">:</span>开启了标量替换（默认打开），允许将对象打散分配在栈上。</code></pre>
+</li>
+<li><p>代码优化（逃逸分析）：栈上分配、同步省略、标量替换。</p>
+<p><strong>逃逸分析只有在服务器端才能开启，参数：<code>-server</code></strong></p>
+</li>
+<li></li>
+</ol>
+<h2 id="关于对象分配过程的总结"><a href="#关于对象分配过程的总结" class="headerlink" title="关于对象分配过程的总结"></a>关于对象分配过程的总结</h2><ol>
+<li>针对幸存者S0，S1区的总结：复制之后有交换，谁空谁是to</li>
+<li>关于垃圾回收：频繁在新生区收集，很少在养老区收集，几乎不再永久区/元空间收集。</li>
+</ol>
+<h2 id="为对象分配内存：TLAB"><a href="#为对象分配内存：TLAB" class="headerlink" title="为对象分配内存：TLAB"></a>为对象分配内存：TLAB</h2><hr>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p>设计模式常用的七大原则：</p>
+<ol>
+<li>单一职责原则</li>
+<li>接口隔离原则</li>
+<li>依赖倒转原则</li>
+<li>里氏替换原则</li>
+<li>开闭原则(ocp)</li>
+<li>迪米特法则</li>
+<li>合成复用原则(有些书上没有单独列出来)</li>
+</ol>
+<hr>
+<h1 id="操作系统整理"><a href="#操作系统整理" class="headerlink" title="操作系统整理"></a>操作系统整理</h1><h2 id="页面置换算法："><a href="#页面置换算法：" class="headerlink" title="页面置换算法："></a>页面置换算法：</h2><ol>
+<li><p>OPT（最佳）置换算法</p>
+<p>淘汰的是以后永不使用的页面，或者在最长时间内不被访问的方法。</p>
+<p>目前无法预知进程在内存下的哪个页面是未来最长时间不被访问的，因此该方法目前无法实现。</p>
+</li>
+<li><p>先进先出（FIFO）置换算法</p>
+<p>换出最先进入内存的页面。</p>
+<p><strong>只有该方法会出现Belady异常</strong>，随着分配的物理块数增大，页故障数不减反增。</p>
+</li>
+<li><p>最近最久未使用算法（LRU）</p>
+<p>换出最近最长时间未被访问过的页面淘汰。</p>
+<p>堆栈类算法不会出现Belady异常</p>
+</li>
+<li><p>时钟置换算法（CLOCK）</p>
+</li>
+</ol>
+<ol start="5">
+<li></li>
+</ol>
+
       
-        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
-      
-      <span>
-        &copy; 2020 - 2020 
-        
-          <span style="color:#d9333f" class="iconfont icon-heart"></span>
-        
-        鱼想衣裳花想容
-      </span>
     </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
-        </div>
-      
-    </div>
-    <div class="mdui-row">
-      
-        <div class="mdui-col-xs-6 mdui-text-right">
-          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
-        </div>
-        <div class="mdui-col-xs-6 mdui-text-left">
-          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
-        </div>
-      
-    </div>
- </div>
-</footer>
-  
-  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
-  
-  
-
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-
-
-
-
 
     
-<script src="/js/mdui.min.v1.0.0.js"></script>
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
 
 
-<script src="/js/meadow.js"></script>
+
+  
+
+
+
+      
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      
+
+      
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">鱼想衣裳花想容</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  
 
 </body>
-</html >
+</html>
