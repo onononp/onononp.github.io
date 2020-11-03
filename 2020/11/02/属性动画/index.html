@@ -615,18 +615,6 @@
 
   
 
-  <script>
-  NexT.utils.loadComments('#SOHUCS', () => {
-    NexT.utils.getScript('https://changyan.sohu.com/upload/changyan.js', () => {
-      window.changyan.api.config({
-        appid: 'cyv8Ba0LC',
-        conf : 'prod_d8564d6e4bfd6cbac72f41058aaacd1c'
-      });
-    });
-  });
-  </script>
-  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
-
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
 
 <script>
@@ -646,6 +634,18 @@ NexT.utils.loadComments('#gitalk-container', () => {
   }, window.Gitalk);
 });
 </script>
+
+  <script>
+  NexT.utils.loadComments('#SOHUCS', () => {
+    NexT.utils.getScript('https://changyan.sohu.com/upload/changyan.js', () => {
+      window.changyan.api.config({
+        appid: 'cyv8Ba0LC',
+        conf : 'prod_d8564d6e4bfd6cbac72f41058aaacd1c'
+      });
+    });
+  });
+  </script>
+  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
 
 <script>
 NexT.utils.loadComments('#valine-comments', () => {
