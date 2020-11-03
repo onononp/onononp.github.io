@@ -308,7 +308,6 @@
         <ul class="nav-tabs">
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
             <li class="tab"><a href="#comment-changyan">changyan</a></li>
-            <li class="tab"><a href="#comment-valine">valine</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane gitalk" id="comment-gitalk">
@@ -320,9 +319,6 @@
     <div id="SOHUCS"></div>
   </div>
   
-            </div>
-            <div class="tab-pane valine" id="comment-valine">
-              <div class="comments" id="valine-comments"></div>
             </div>
         </div>
       </div>
@@ -431,18 +427,6 @@
   });
   </script>
   <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
-
-<script>
-NexT.utils.loadComments('#valine-comments', () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
-    new Valine(Object.assign({"enable":true,"appId":"wQJoxjKIkypmpAmS86TYUvQx-gzGzoHsz","appKey":"0sCo5GRHzFHObpQFQGOadO7n","serverURLs":null,"placeholder":"各位客官讲一下吧~","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-cn","visitor":true,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":["nick","mail"]}, {
-      el: '#valine-comments',
-      path: "/about/",
-      serverURLs: "https://wqjoxjki.api.lncldglobal.com"
-    }));
-  }, window.Valine);
-});
-</script>
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
 
