@@ -1,103 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2020/11/02/%E5%B1%9E%E6%80%A7%E5%8A%A8%E7%94%BB/</url>
-    <content><![CDATA[<h2 id="属性动画"><a href="#属性动画" class="headerlink" title="属性动画"></a>属性动画</h2><ul>
-<li>使用最多的是<code>AnimatorSet</code>和<code>ObjectAnimator</code>配合</li>
-<li>使用<code>ObjectAnimator</code>进行更精细化的控制，控制一个对象和一个属性值。使用多个<code>ObjectAnimator</code>组合到<code>AnimatorSet</code>形成一个动画</li>
-<li>属性动画通过调用属性get,set方法来真实地控制一个View的属性值</li>
-</ul>
-<ol>
-<li><p><code>ObjectAnimator</code></p>
-<ol>
-<li><p>创建一个<code>ObjectAnimator</code>对象只需通过其静态工厂类直接返还一个<code>ObjectAnimator</code>对象。</p>
-</li>
-<li><p>参数包括一个对象和一个对象的属性名字，这个属性必须有set和get方法，其内部会通过Java反射机制来调用set方法修改对象的属性值</p>
-</li>
-<li><blockquote>
-<p>ObjectAnimator mObjectAnimator = ObjectAnimator.ofFloat(view,”translationX”,200);</p>
-<p>mObjectAnimator.setDuration(300);</p>
-<p>mObjectAnimator.start();</p>
-</blockquote>
-</li>
-<li><p>常用的可以直接使用的属性动画的属性值：</p>
-<ol>
-<li>translationX、translationY:用来沿着X轴或者Y轴进行平移</li>
-<li>rotation,totationX,totationY:用来围绕View的支点进行旋转</li>
-<li>PrivotX和PrivotY:控制View对象的支点位置，围绕这个支点进行旋转和缩放变换处理。默认该支点是View对象的中心点</li>
-<li>alpha:透明度，默认是1（不透明），0代表完全透明</li>
-<li>x和y:描述View对象在其容器中的最终位置</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p><code>ValueAnimator</code></p>
-<ol>
-<li><p><code>ValueAnimator</code>不提供任何动画效果，它更像一个数值发生器，用来产生有一定规律的数字，从而让调用者控制动画的实现过程。通常情况下，在ValueAnimator的AnimatorUpdateListener中监听数值的变化，从而完成动画的变换，代码如下所示：</p>
-<blockquote>
-<p>ValueAnimator mValueAnimator=ValueAniamtor.ofFloat(0,100);</p>
-<p>mValueAniamtor.setTarget(view);</p>
-<p>mValueAnimator.setDuration(1000).start();</p>
-<p>mValueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){</p>
-<p>​    @Override</p>
-<p>​    public void onAnimationUpdate(ValueAnimator animation){</p>
-<p>​    Float mFloat = (Float)animation.getAnimatedValue();</p>
-<p>}</p>
-<p>})</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>动画的监听</p>
-<ol>
-<li><p>完成的动画具有start,Repeat,End,Cancel四个过程，代码如下所示：</p>
-<blockquote>
-<p>ObjectAnimator animator = ObjectAniamtor.ofFloat(view,”alpha”,1.5f);</p>
-<p>animator.addListener(new Animator.AnimatorListener(){</p>
-<p>​    @Override</p>
-<p>​    public void onAnimationStart(Animator animation){</p>
-<p>}</p>
-<p>​    @Override</p>
-<p>​    public void onAnimationEnd(Animator animaton){</p>
-<p>}</p>
-<p>​    @Override</p>
-<p>​    public void onAnimationCancel(Animator animation){</p>
-<p>}</p>
-<p>​    @Override</p>
-<p>​    public void onAnimationRepeat(Animator animation){</p>
-<p>}</p>
-<p>})</p>
-</blockquote>
-<p>大部分时候我们只关心onAnimationEnd事件，Android也提供了AnimationListenerAdapter来让我们选择必要的事件进行监听。</p>
-<blockquote>
-<p>ObjectAnimator animator=ObjectAnimator.ofFloat(view,”alpha”,1.5f);</p>
-<p>animator.addListener(new AnimatorListenerAdapter(){</p>
-<p>​    @Override</p>
-<p>​    public void onAnimationEnd(Animator animation){</p>
-<p>​    super.onAnimationEnd(animation);}</p>
-<p>})</p>
-</blockquote>
-</li>
-</ol>
-</li>
-<li><p>组合动画AnimatorSet</p>
-<ol>
-<li>Animator提供了一个play()方法，如果我们向这个方法中传入一个Animator对象（<code>ObjectAnmator</code>或<code>ValueAnimator</code>），将会返回一个AnimatorSet.Builder的实例。</li>
-<li>AnimatorSet.Builder采用了建造者模式，每次调用方法返回自身用于继续构建。AnimatorSet.Builder中包含以下四个方法：<ol>
-<li>after(Animator anim):将现有动画插入到传入的动画之后执行</li>
-<li>after(long delay):将现有动画延迟毫秒后执行</li>
-<li>with(Animator anim):将现有动画和传入动画同时执行</li>
-<li>before(Animator anim):将现有动画插入到传入动画之前执行</li>
-</ol>
-</li>
-</ol>
-</li>
-<li></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>测试分类</title>
     <url>/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[]]></content>
@@ -109,28 +12,17 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/11/02/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%20%E5%90%8C%E6%AD%A5%E4%BA%92%E6%96%A5/</url>
-    <content><![CDATA[<h2 id="进程同步与互斥"><a href="#进程同步与互斥" class="headerlink" title="进程同步与互斥"></a>进程同步与互斥</h2><ol>
-<li><p>三个进程P1，P2，P3互斥使用一个包含N（N&gt;0）个单元的缓冲区，P1每次用produce()生成一个正整数并用put()送入缓冲区的某一空单元；P2每次用getodd()从该缓冲区中取出一个奇数并用countodd（）统计奇数个数；P3每次用geteven()从该缓冲区中取出一个偶数并用counteven()统计偶数个数。请用信号量机制实现这三个进程的同步与互斥活动。并说明所定义的信号量的含义（要求用伪代码描述）。</p>
-<p>答：互斥资源：缓冲区只能互斥访问，因此设置互斥信号量mutex</p>
-<p>同步问题：P1，P2因为奇数的放置与取用而同步，设同步信号量odd;P1，P3因为偶数的放置与取用而同步，设置同步信号量even；P1，P2，P3因为共享缓冲区，设同步信号量为empty,初值为N，程序如下：<a href="https://paste.ubuntu.com/p/5tJD3PSyC2/">https://paste.ubuntu.com/p/5tJD3PSyC2/</a></p>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>整理合集</title>
     <url>/2020/11/02/%E6%95%B4%E7%90%86%E5%90%88%E9%9B%86/</url>
-    <content><![CDATA[<h1 id="要解决的问题"><a href="#要解决的问题" class="headerlink" title="要解决的问题"></a>要解决的问题</h1><ul>
-<li>ByteArrayOutputStream </li>
-</ul>
-<h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><ul>
-<li>String为什么不可变？<ul>
-<li>简单来说，String底层的存储结构为<code>private final char[] value;</code>数组，JDK9之后改为了<code>private final byte[] value</code>，设计思想就是不让String可变，String内部的方法，比如concat拼接方法，replace()替换字符的方法，最后都返回了新的String对象。所以说String是不可变的。</li>
+    <content><![CDATA[<h2 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h2><h3 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h3><ul>
+<li><p>String为什么不可变？</p>
+<ul>
+<li><p>简单来说，String底层的存储结构为<code>private final char[] value;</code>数组，JDK9之后改为了<code>private final byte[] value</code>，设计思想就是不让String可变，String内部的方法，比如concat拼接方法，replace()替换字符的方法，最后都返回了新的String对象。所以说String是不可变的。</p>
+<a id="more"></a></li>
 </ul>
 </li>
-<li>StringBuilder和StringBuffer的区别？<ul>
+<li><p>StringBuilder和StringBuffer的区别？</p>
+<ul>
 <li>StringBuilder和StringBuffer都继承自AbstractStringBuilder,在源码中：AbstractStringBuilder实现了Appendable和CharSequence方法，具体的存储结构是<code>char[] value</code>数组，并且定义了一个数组的最大值为<code>Integer.MAX_VALUE-8</code>，不管是在初始化还是扩容过程中超过这个容量都会抛出异常。</li>
 <li>扩容过程：<ul>
 <li>先调用<code>ensureCapacity(minCapacity)</code>方法，如果minCapacity是负数，则改方法没有任何作用，只会简单的返回。</li>
@@ -144,7 +36,8 @@
 <li>默认创建的数组大小都是16或者原来的大小加16.</li>
 </ul>
 </li>
-<li>在以下4种情况下，finally块不会被执行：<ol>
+<li><p>在以下4种情况下，finally块不会被执行：</p>
+<ol>
 <li>在finally语句块第一行发生了异常。（因为在其它行，finally块还是会等到执行）</li>
 <li>在前面的代码中用了System.exit(int)已退出程序。exit()是带参函数；若该语句在异常语句之后，finally块会执行</li>
 <li>程序所在的线程死亡</li>
