@@ -181,8 +181,8 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1em;
+  font-family: Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.125em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -194,7 +194,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Amita, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -361,6 +361,42 @@ td {
   top: -5px;
   transform: rotate(-45deg);
 }
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--highlight-foreground);
+  font-size: 14px;
+  right: 0;
+  top: 2px;
+}
+figure.highlight {
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+figure.highlight .table-container {
+  border-radius: 0 0 5px 5px;
+}
+figure.highlight::before {
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  border-radius: 50%;
+  content: ' ';
+  height: 12px;
+  width: 12px;
+}
 code,
 kbd,
 figure.highlight,
@@ -375,7 +411,7 @@ pre {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: PT Mono, consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   border-radius: 3px;
@@ -1099,7 +1135,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Lobster Two, Noto Serif SC, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1202,6 +1238,105 @@ pre code {
 }
 .use-motion .menu-item {
   visibility: hidden;
+}
+.book-mark-link {
+  border-bottom: none;
+  position: fixed;
+  top: -10px;
+  transition: top 0.3s;
+  right: 30px;
+}
+@media (max-width: 991px) {
+  .book-mark-link {
+    right: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .book-mark-link {
+    display: none;
+  }
+}
+.book-mark-link::before {
+  color: #222;
+  font-size: 32px;
+  line-height: 1;
+  content: '\f02e';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.book-mark-link:hover,
+.book-mark-link-fixed {
+  top: -2px;
+}
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+.github-corner svg {
+  color: #fff;
+  fill: #222;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+@media (max-width: 991px) {
+  .github-corner {
+    display: none;
+  }
+  .github-corner svg {
+    color: #222;
+    fill: #fff;
+  }
+  .github-corner .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+@-moz-keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@-webkit-keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@-o-keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
 }
 .sidebar-inner {
   color: #999;
@@ -1646,9 +1781,6 @@ pre code {
 .back-to-top {
   font-size: 12px;
 }
-.back-to-top span {
-  display: none;
-}
 .back-to-top {
   bottom: -100px;
   box-sizing: border-box;
@@ -1661,7 +1793,6 @@ pre code {
   position: fixed;
   z-index: 1300;
   right: 30px;
-  width: 24px;
 }
 @media (max-width: 991px) {
   .back-to-top {
@@ -1694,6 +1825,15 @@ pre code {
   top: 0;
   width: 100%;
   z-index: 1500;
+}
+.reading-progress-bar {
+  background: #37c6c0;
+  height: 3px;
+  left: 0;
+  position: fixed;
+  width: 0;
+  z-index: 1500;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -1834,7 +1974,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Montserrat, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2027,7 +2167,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Montserrat, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
