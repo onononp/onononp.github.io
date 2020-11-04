@@ -181,8 +181,8 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1em;
+  font-family: Roboto, Noto Serif SC, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 1.125em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -194,7 +194,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Amita, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Roboto, Noto Serif SC, Roboto, Noto Serif SC, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -511,7 +511,7 @@ pre {
 }
 pre,
 code {
-  font-family: PT Mono, consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: Roboto, Noto Serif SC, consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   border-radius: 3px;
@@ -1234,7 +1234,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Lobster Two, Noto Serif SC, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Roboto, Noto Serif SC, Roboto, Noto Serif SC, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -2073,7 +2073,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Montserrat, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Roboto, Noto Serif SC, Roboto, Noto Serif SC, "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2266,7 +2266,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Montserrat, Monda, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: Roboto, Noto Serif SC, Roboto, Noto Serif SC, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
