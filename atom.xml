@@ -6,7 +6,7 @@
   <link href="https://onononp.github.io/atom.xml" rel="self"/>
   
   <link href="https://onononp.github.io/"/>
-  <updated>2020-11-06T03:50:08.790Z</updated>
+  <updated>2020-11-06T13:09:48.926Z</updated>
   <id>https://onononp.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="https://onononp.github.io/2020/11/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://onononp.github.io/2020/11/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2020-11-06T13:01:52.000Z</published>
+    <updated>2020-11-06T13:09:48.926Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;设计模式&quot;&gt;&lt;a href=&quot;#设计模式&quot; class=&quot;headerlink&quot; title=&quot;设计模式&quot;&gt;&lt;/a&gt;设计模式&lt;/h1&gt;&lt;h2 id=&quot;采用设计模式的目的&quot;&gt;&lt;a href=&quot;#采用设计模式的目的&quot; class=&quot;headerlink&quot; title=&quot;采用设计模式的目的&quot;&gt;&lt;/a&gt;采用设计模式的目的&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;代码重用性&lt;/li&gt;
+&lt;li&gt;可读性&lt;/li&gt;
+&lt;li&gt;可扩展性&lt;/li&gt;
+&lt;li&gt;可靠性&lt;/li&gt;
+&lt;li&gt;使程序呈现高内聚，低耦合的特性&lt;/li&gt;&lt;/ol&gt;</summary>
+    
+    
+    
+    
+    <category term="设计模式" scheme="https://onononp.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>一个小故事</title>
