@@ -3,8 +3,7 @@
   <entry>
     <title>一个小故事</title>
     <url>/2020/11/04/%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%95%85%E4%BA%8B/</url>
-    <content><![CDATA[<p>​    今天我想给大家讲一个小故事，关于某东和网购的故事。</p>
-<p>​    <a id="more"></a></p>
+    <content><![CDATA[<p>​    今天我想给大家讲一个小故事，关于某东和网购的故事。    <a id="more"></a></p>
 <p>​    一开始，小A刚刚开始网购的时候，用的是某宝，至于用某宝的原因，无非是因为当初他的女朋友在注册账户的时候遇到了问题，所以小A帮忙注册了一个账户。</p>
 <p>​    某宝上面的东西挺多的，小A喜欢上了逛某宝。</p>
 <p>​    有一次，实验室新配的电脑没有网卡，需要买一个<code>USB</code>网卡。</p>
@@ -20,22 +19,9 @@
 <p>​    渐渐地，小A发现会员有别的用途。比如，自营的东西退货不要运费，而且是上门取件。比如，退货有的时候刚把东西给快递小哥，马上钱就会退回来……</p>
 <p>​    其实，</p>
 ]]></content>
-      <categories>
-        <category>小故事,京东</category>
-      </categories>
       <tags>
-        <tag>小故事,京东</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>测试分类</title>
-    <url>/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
+        <tag>小故事</tag>
+        <tag>京东</tag>
       </tags>
   </entry>
   <entry>
@@ -55,6 +41,17 @@
 ]]></content>
       <tags>
         <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试分类</title>
+    <url>/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
       </tags>
   </entry>
   <entry>
