@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>javap命令的说明</title>
+    <url>/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<p><img data-src="javap.png"></p>
+<ul>
+<li><code>-version:</code>当前javap所在jdk的版本信息</li>
+<li><code>-public:</code>仅显示公共类和成员<a id="more"></a></li>
+<li><code>-protected:</code>显示受保护的/公共类和成员</li>
+<li><code>-p -private:</code>显示所有类和成员</li>
+<li><code>-package:</code>显示程序包/受保护的/公共类和成员（默认）</li>
+<li><code>-sysinfo:</code>显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名）</li>
+<li><code>-constants:</code>显示静态最终常量</li>
+</ul>
+<ul>
+<li><code>-s:</code>输出内部类型签名</li>
+<li><code>-l:</code>输出行号和本地变量表</li>
+<li><code>-c:</code>对代码进行反汇编</li>
+<li><code>-v -verbose:</code>输出附加信息（包括行号、本地变量表、反汇编等详细信息）</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>面试</tag>
+        <tag>JVM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>foreach循环中为什么不要进行remove/add操作</title>
     <url>/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p>昨天在看<span class="exturl" data-url="aHR0cHM6Ly9zbmFpbGNsaW1iLmdpdGVlLmlvL2phdmFndWlkZS8jLw==">JavaGuide<i class="fa fa-external-link-alt"></i></span>的时候，发现了一个关于<code>foreach</code>循环的一个很有意思的问题。</p>
@@ -87,31 +112,6 @@
       <tags>
         <tag>面试</tag>
         <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>javap命令的说明</title>
-    <url>/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<p><img data-src="javap.png"></p>
-<ul>
-<li><code>-version:</code>当前javap所在jdk的版本信息</li>
-<li><code>-public:</code>仅显示公共类和成员<a id="more"></a></li>
-<li><code>-protected:</code>显示受保护的/公共类和成员</li>
-<li><code>-p -private:</code>显示所有类和成员</li>
-<li><code>-package:</code>显示程序包/受保护的/公共类和成员（默认）</li>
-<li><code>-sysinfo:</code>显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名）</li>
-<li><code>-constants:</code>显示静态最终常量</li>
-</ul>
-<ul>
-<li><code>-s:</code>输出内部类型签名</li>
-<li><code>-l:</code>输出行号和本地变量表</li>
-<li><code>-c:</code>对代码进行反汇编</li>
-<li><code>-v -verbose:</code>输出附加信息（包括行号、本地变量表、反汇编等详细信息）</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>面试</tag>
-        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
