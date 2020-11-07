@@ -16,7 +16,7 @@
     <content><![CDATA[<p><img data-src="javap.png"></p>
 <ul>
 <li><code>-version:</code>当前javap所在jdk的版本信息</li>
-<li><code>-public:</code>仅显示公共类和成员</li>
+<li><code>-public:</code>仅显示公共类和成员<a id="more"></a></li>
 <li><code>-protected:</code>显示受保护的/公共类和成员</li>
 <li><code>-p -private:</code>显示所有类和成员</li>
 <li><code>-package:</code>显示程序包/受保护的/公共类和成员（默认）</li>

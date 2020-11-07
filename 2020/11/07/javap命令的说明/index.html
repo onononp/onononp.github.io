@@ -30,16 +30,16 @@
     var CONFIG = {"hostname":"onononp.github.io","root":"/","scheme":"Gemini","version":"8.0.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":14,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"disqus":{"text":"Load Disqus","order":-1},"gitalk":{"order":-2}},"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="-version:当前javap所在jdk的版本信息 -public:仅显示公共类和成员 -protected:显示受保护的&#x2F;公共类和成员 -p -private:显示所有类和成员 -package:显示程序包&#x2F;受保护的&#x2F;公共类和成员（默认） -sysinfo:显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名） -constants:显示静态最终常量   -s:输出内部类型">
+  <meta name="description" content="-version:当前javap所在jdk的版本信息 -public:仅显示公共类和成员">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javap命令的说明">
 <meta property="og:url" content="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/index.html">
 <meta property="og:site_name" content="鱼想衣裳花想容">
-<meta property="og:description" content="-version:当前javap所在jdk的版本信息 -public:仅显示公共类和成员 -protected:显示受保护的&#x2F;公共类和成员 -p -private:显示所有类和成员 -package:显示程序包&#x2F;受保护的&#x2F;公共类和成员（默认） -sysinfo:显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名） -constants:显示静态最终常量   -s:输出内部类型">
+<meta property="og:description" content="-version:当前javap所在jdk的版本信息 -public:仅显示公共类和成员">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/javap.png">
 <meta property="article:published_time" content="2020-11-07T05:20:54.000Z">
-<meta property="article:modified_time" content="2020-11-07T07:17:09.425Z">
+<meta property="article:modified_time" content="2020-11-07T07:21:24.606Z">
 <meta property="article:author" content="鱼想衣裳花想容">
 <meta property="article:tag" content="面试">
 <meta property="article:tag" content="JVM">
@@ -420,7 +420,7 @@
         <p><img data-src="javap.png"></p>
 <ul>
 <li><code>-version:</code>当前javap所在jdk的版本信息</li>
-<li><code>-public:</code>仅显示公共类和成员</li>
+<li><code>-public:</code>仅显示公共类和成员<a id="more"></a></li>
 <li><code>-protected:</code>显示受保护的/公共类和成员</li>
 <li><code>-p -private:</code>显示所有类和成员</li>
 <li><code>-package:</code>显示程序包/受保护的/公共类和成员（默认）</li>
