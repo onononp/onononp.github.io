@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/</loc>
+    <loc>https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2020-11-07</lastmod>
     
   </url>
   
   <url>
-    <loc>https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/</loc>
+    <loc>https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/</loc>
     
     <lastmod>2020-11-07</lastmod>
     
@@ -102,14 +102,14 @@
   </url>
   
   <url>
-    <loc>https://onononp.github.io/tags/java%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://onononp.github.io/tags/JVM/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://onononp.github.io/tags/JVM/</loc>
+    <loc>https://onononp.github.io/tags/java%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-11-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
