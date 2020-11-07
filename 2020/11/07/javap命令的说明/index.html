@@ -30,22 +30,24 @@
     var CONFIG = {"hostname":"onononp.github.io","root":"/","scheme":"Gemini","version":"8.0.2","exturl":true,"sidebar":{"position":"left","display":"post","padding":14,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":true,"nav":{"disqus":{"text":"Load Disqus","order":-1},"gitalk":{"order":-2}},"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="昨天在看JavaGuide的时候，发现了一个很有意思的问题。">
+  <meta name="description" content="-version:当前javap所在jdk的版本信息 -public:仅显示公共类和成员 -protected:显示受保护的&#x2F;公共类和成员 -p -private:显示所有类和成员 -package:显示程序包&#x2F;受保护的&#x2F;公共类和成员（默认） -sysinfo:显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名） -constants:显示静态最终常量   -s:输出内部类型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="foreach循环中为什么不要进行remove&#x2F;add操作">
-<meta property="og:url" content="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="javap命令的说明">
+<meta property="og:url" content="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/index.html">
 <meta property="og:site_name" content="鱼想衣裳花想容">
-<meta property="og:description" content="昨天在看JavaGuide的时候，发现了一个很有意思的问题。">
+<meta property="og:description" content="-version:当前javap所在jdk的版本信息 -public:仅显示公共类和成员 -protected:显示受保护的&#x2F;公共类和成员 -p -private:显示所有类和成员 -package:显示程序包&#x2F;受保护的&#x2F;公共类和成员（默认） -sysinfo:显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名） -constants:显示静态最终常量   -s:输出内部类型">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-07T03:25:12.000Z">
-<meta property="article:modified_time" content="2020-11-07T05:00:17.361Z">
+<meta property="og:image" content="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/javap.png">
+<meta property="article:published_time" content="2020-11-07T05:20:54.000Z">
+<meta property="article:modified_time" content="2020-11-07T07:17:09.425Z">
 <meta property="article:author" content="鱼想衣裳花想容">
 <meta property="article:tag" content="面试">
-<meta property="article:tag" content="java基础">
+<meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/javap.png">
 
 
-<link rel="canonical" href="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/">
+<link rel="canonical" href="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/">
 
 
 <script class="page-configurations">
@@ -58,7 +60,7 @@
   };
 </script>
 
-  <title>foreach循环中为什么不要进行remove/add操作 | 鱼想衣裳花想容</title>
+  <title>javap命令的说明 | 鱼想衣裳花想容</title>
   
 
 
@@ -341,7 +343,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/apple-touch-icon.png">
@@ -354,7 +356,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          foreach循环中为什么不要进行remove/add操作
+          javap命令的说明
         </h1>
 
         <div class="post-meta-container">
@@ -365,7 +367,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2020-11-07 11:25:12" itemprop="dateCreated datePublished" datetime="2020-11-07T11:25:12+08:00">2020-11-07</time>
+      <time title="创建时间：2020-11-07 13:20:54" itemprop="dateCreated datePublished" datetime="2020-11-07T13:20:54+08:00">2020-11-07</time>
     </span>
 
   
@@ -385,8 +387,8 @@
       <span class="post-meta-item-text">Changyan：</span>
     
     
-      <a title="changyan" href="/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/#SOHUCS" itemprop="discussionUrl">
-        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2020/11/07/foreach循环中为什么不要进行remove-add操作/" itemprop="commentCount"></span>
+      <a title="changyan" href="/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2020/11/07/javap命令的说明/" itemprop="commentCount"></span>
       </a>
     
   </span>
@@ -397,7 +399,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>30</span>
+      <span>252</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -415,7 +417,22 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>昨天在看<span class="exturl" data-url="aHR0cHM6Ly9zbmFpbGNsaW1iLmdpdGVlLmlvL2phdmFndWlkZS8jLw==">JavaGuide<i class="fa fa-external-link-alt"></i></span>的时候，发现了一个很有意思的问题。</p>
+        <p><img data-src="javap.png"></p>
+<ul>
+<li><code>-version:</code>当前javap所在jdk的版本信息</li>
+<li><code>-public:</code>仅显示公共类和成员</li>
+<li><code>-protected:</code>显示受保护的/公共类和成员</li>
+<li><code>-p -private:</code>显示所有类和成员</li>
+<li><code>-package:</code>显示程序包/受保护的/公共类和成员（默认）</li>
+<li><code>-sysinfo:</code>显示正在处理的类的系统信息（路径、大小、日期、MD5、散列、源文件名）</li>
+<li><code>-constants:</code>显示静态最终常量</li>
+</ul>
+<ul>
+<li><code>-s:</code>输出内部类型签名</li>
+<li><code>-l:</code>输出行号和本地变量表</li>
+<li><code>-c:</code>对代码进行反汇编</li>
+<li><code>-v -verbose:</code>输出附加信息（包括行号、本地变量表、反汇编等详细信息）</li>
+</ul>
 
     </div>
 
@@ -433,7 +450,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/" title="foreach循环中为什么不要进行remove&#x2F;add操作">https://onononp.github.io/2020/11/07/foreach循环中为什么不要进行remove-add操作/</a>
+      <a href="https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/" title="javap命令的说明">https://onononp.github.io/2020/11/07/javap命令的说明/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -443,21 +460,18 @@
 
           <div class="post-tags">
               <a href="/tags/%E9%9D%A2%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 面试</a>
-              <a href="/tags/java%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> java基础</a>
+              <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/11/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="prev" title="设计模式">
-                  <i class="fa fa-chevron-left"></i> 设计模式
+                <a href="/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/" rel="prev" title="foreach循环中为什么不要进行remove/add操作">
+                  <i class="fa fa-chevron-left"></i> foreach循环中为什么不要进行remove/add操作
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/" rel="next" title="javap命令的说明">
-                  javap命令的说明 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -647,7 +661,7 @@
       quicklink.listen({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://onononp.github.io/2020/11/07/javap%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AF%B4%E6%98%8E/',]
       });
       });
   </script>
@@ -675,7 +689,7 @@ NexT.utils.loadComments('#gitalk-container', () => {
       repo        : 'onononp.github.io',
       owner       : 'onononp',
       admin       : ['onononp'],
-      id          : 'd0ff7ab63469d7b025205b26fe7a5996',
+      id          : 'bf6458abbc1676f669405f288edb6473',
         language: 'zh-CN',
       distractionFreeMode: true
     });
