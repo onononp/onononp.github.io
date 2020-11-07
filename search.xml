@@ -26,6 +26,25 @@
       </tags>
   </entry>
   <entry>
+    <title>记22周岁生日</title>
+    <url>/2020/11/03/%E8%AE%B022%E5%91%A8%E5%B2%81%E7%94%9F%E6%97%A5/</url>
+    <content><![CDATA[<p>​    22周岁的生日，平平淡淡，其实已经过去一段时间了。</p>
+<a id="more"></a>
+
+<p>​    今天有幸收到来自远方同学的礼物，原来就是她前几天提到过的保温杯……有点意外，这个保温杯竟然是给我的……</p>
+<p>​    <strong>感谢今年的唯一一份礼物！</strong></p>
+<p>​    好了，就到这里了……</p>
+<p>​    放几张图……</p>
+<p>​    <img data-src="1.jpg"></p>
+<p>​    <img data-src="2.jpg"></p>
+<hr>
+<p>​    咳咳，在北京咳嗽拿了点药花了100多……在外面买药总是很贵……</p>
+]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>foreach循环中为什么不要进行remove/add操作</title>
     <url>/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<p>昨天在看<span class="exturl" data-url="aHR0cHM6Ly9zbmFpbGNsaW1iLmdpdGVlLmlvL2phdmFndWlkZS8jLw==">JavaGuide<i class="fa fa-external-link-alt"></i></span>的时候，发现了一个关于<code>foreach</code>循环的一个很有意思的问题。</p>
@@ -79,7 +98,7 @@
 <p>这段代码相对第一段代码的改变是：<strong>将删除的判断条件由“1”改为了“2”，也就是要删除第二个元素。</strong>想一下，这里代码运行时会出现什么情况。</p>
 <p>获得<code>iterator()</code>后，各个变量的值为：<code>modCount=2,exceptedModCount=modCount=2,cursor=0,size=2</code>.</p>
 <p>第一次循环，什么也没做。第一次循环结束后，各个变量的值为：<code>modCount=2=exceptedModCount,size=2,cursor=1</code>;</p>
-<p>然后进行第二次循环的判断，<code>hasNext()</code>中，<code>cursor!=size</code>,所以没到结束，进入第二次循环，调用<code>itr.next()</code>方法，调用结束后，<code>modCount=exceptedModCount=2,cursor=2,size=2</code>,并且返回的是<code>"1"</code>.</p>
+<p>然后进行第二次循环的判断，<code>hasNext()</code>中，<code>cursor!=size</code>,所以没到结束，进入第二次循环，调用<code>itr.next()</code>方法，调用结束后，<code>modCount=exceptedModCount=2,cursor=2,size=2</code>,并且返回的是<code>"2"</code>.</p>
 <p>判断<code>"2".equals(s)</code>,为真，所以删除第二个元素。<strong>注意：此时调用的是<code>ArrayList</code>中的remove(Object o)方法，modCount++,所以删除后，modCount=3.而exceptedModCount=2. size=1</strong></p>
 <p>进行循环条件的判断，<code>haxNext()</code>方法中，<code>cursor!=size</code>为false,认为还没有遍历到结尾。所以再调用<code>next()</code>方法。<code>next()</code>方法中，首先调用<code>checkForModification()</code>方法，此时<code>modCount!=exceptedModCount</code>,抛出<code>ConcurrentModificationException</code>.</p>
 <p>具体的运行结果为：</p>
@@ -112,25 +131,6 @@
       <tags>
         <tag>面试</tag>
         <tag>java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记22周岁生日</title>
-    <url>/2020/11/03/%E8%AE%B022%E5%91%A8%E5%B2%81%E7%94%9F%E6%97%A5/</url>
-    <content><![CDATA[<p>​    22周岁的生日，平平淡淡，其实已经过去一段时间了。</p>
-<a id="more"></a>
-
-<p>​    今天有幸收到来自远方同学的礼物，原来就是她前几天提到过的保温杯……有点意外，这个保温杯竟然是给我的……</p>
-<p>​    <strong>感谢今年的唯一一份礼物！</strong></p>
-<p>​    好了，就到这里了……</p>
-<p>​    放几张图……</p>
-<p>​    <img data-src="1.jpg"></p>
-<p>​    <img data-src="2.jpg"></p>
-<hr>
-<p>​    咳咳，在北京咳嗽拿了点药花了100多……在外面买药总是很贵……</p>
-]]></content>
-      <tags>
-        <tag>日记</tag>
       </tags>
   </entry>
   <entry>
