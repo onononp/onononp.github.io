@@ -31,18 +31,20 @@
   </script>
 
   <meta name="description" content="这是我的世界">
-<meta property="og:type" content="website">
-<meta property="og:title" content="鱼想衣裳花想容">
-<meta property="og:url" content="https://onononp.github.io/categories/%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="foreach循环中为什么不要进行remove&#x2F;add操作">
+<meta property="og:url" content="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="鱼想衣裳花想容">
 <meta property="og:description" content="这是我的世界">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-07T03:25:12.000Z">
+<meta property="article:modified_time" content="2020-11-07T03:25:12.466Z">
 <meta property="article:author" content="鱼想衣裳花想容">
 <meta property="article:tag" content="Java,Android,生活,记录">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://onononp.github.io/categories/%E6%B5%8B%E8%AF%95/">
+<link rel="canonical" href="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/">
 
 
 <script class="page-configurations">
@@ -50,12 +52,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 测试 | 鱼想衣裳花想容</title>
+  <title>foreach循环中为什么不要进行remove/add操作 | 鱼想衣裳花想容</title>
   
 
 
@@ -325,58 +327,158 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">测试
-          <small>分类</small>
-        </h2>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/apple-touch-icon.png">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+      <meta itemprop="description" content="这是我的世界">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="鱼想衣裳花想容">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          foreach循环中为什么不要进行remove/add操作
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-11-07 11:25:12" itemprop="dateCreated datePublished" datetime="2020-11-07T11:25:12+08:00">2020-11-07</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2020/11/07/foreach循环中为什么不要进行remove-add操作/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2020-11-03T14:09:30+08:00"
-              content="2020-11-03">
-          11-03
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/11/03/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/" itemprop="url">
-            <span itemprop="name">测试分类</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          
 
-      
-    </header>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>全文博主： </strong>鱼想衣裳花想容
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/" title="foreach循环中为什么不要进行remove&#x2F;add操作">https://onononp.github.io/2020/11/07/foreach循环中为什么不要进行remove-add操作/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/06/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="prev" title="设计模式">
+                  <i class="fa fa-chevron-left"></i> 设计模式
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
+
+
+
+
+
+      
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+            <li class="tab"><a href="#comment-changyan">changyan</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+            <div class="tab-pane changyan" id="comment-changyan">
+              
+  <div class="comments">
+    <div id="SOHUCS"></div>
   </div>
   
-  
-  
-
-  
-
-
-
-      
+            </div>
+        </div>
+      </div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -536,12 +638,42 @@
       quicklink.listen({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'https://onononp.github.io/categories/%E6%B5%8B%E8%AF%95/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://onononp.github.io/2020/11/07/foreach%E5%BE%AA%E7%8E%AF%E4%B8%AD%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%A6%81%E8%BF%9B%E8%A1%8Cremove-add%E6%93%8D%E4%BD%9C/',]
       });
       });
   </script>
 
+  <script>
+  NexT.utils.loadComments('#SOHUCS', () => {
+    NexT.utils.getScript('https://changyan.sohu.com/upload/changyan.js', () => {
+      window.changyan.api.config({
+        appid: 'cyv8Ba0LC',
+        conf : 'prod_d8564d6e4bfd6cbac72f41058aaacd1c'
+      });
+    });
+  });
+  </script>
+  <script src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '39b971e6f315cfd4fd47',
+      clientSecret: '00023432a235747b006d18e2fae05764b60397d0',
+      repo        : 'onononp.github.io',
+      owner       : 'onononp',
+      admin       : ['onononp'],
+      id          : 'd0ff7ab63469d7b025205b26fe7a5996',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
