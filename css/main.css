@@ -182,7 +182,7 @@ body {
   background: var(--body-bg-color);
   color: var(--text-color);
   font-family: Roboto, Noto Serif SC, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 1.125em;
+  font-size: 1em;
   line-height: 2;
   min-height: 100%;
   position: relative;
@@ -1439,7 +1439,7 @@ pre code {
 }
 .sidebar-inner {
   color: #999;
-  padding: 14px 10px;
+  padding: 18px 10px;
   text-align: center;
 }
 .site-overview-item:not(:first-child) {
