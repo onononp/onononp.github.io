@@ -102,13 +102,6 @@
   </url>
   
   <url>
-    <loc>https://onononp.github.io/tags/java%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2020-11-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://onononp.github.io/tags/JVM/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
@@ -116,14 +109,21 @@
   </url>
   
   <url>
-    <loc>https://onononp.github.io/tags/%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://onononp.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://onononp.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <loc>https://onononp.github.io/tags/java%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2020-11-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://onononp.github.io/tags/%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2020-11-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
